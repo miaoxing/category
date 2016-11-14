@@ -5,7 +5,7 @@ namespace Miaoxing\Category\Service;
 use plugins\menu\services\Menu;
 
 /**
- * @property \plugins\LinkTo\services\LinkTo $linkTo
+ * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
  */
 class Category extends \miaoxing\plugin\BaseModel
 {

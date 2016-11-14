@@ -72,7 +72,7 @@
         </div>
       </div>
 
-      <?php require $view->getFile('linkTo:linkTo/linkTo.php') ?>
+      <?php require $view->getFile('linkTo:link-to/link-to.php') ?>
 
       <div class="form-group">
         <label class="col-lg-2 control-label" for="sort">
