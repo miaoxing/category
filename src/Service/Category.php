@@ -54,13 +54,14 @@ class Category extends \miaoxing\plugin\BaseModel
 
     public function withParent($parentId)
     {
-        return $this->andWhere("parentId = ?", $parentId)->desc('sort');
+        return $this->andWhere('parentId = ?', $parentId)->desc('sort');
     }
 
     public function withType($type)
     {
         $this->type = $type;
-        return $this->andWhere("type = ?", $type);
+
+        return $this->andWhere('type = ?', $type);
     }
 
     public function withoutParent()
@@ -78,6 +79,7 @@ class Category extends \miaoxing\plugin\BaseModel
         if (!$this['linkTo'] || !isset($this['linkTo']['type'])) {
             $this['linkTo'] = $this->createLinkTo();
         }
+
         return $this->linkTo->getUrl($this['linkTo']);
     }
 
@@ -90,17 +92,17 @@ class Category extends \miaoxing\plugin\BaseModel
     public function createLinkTo()
     {
         switch (true) {
-            case $this['type'] == 'mall' :
+            case $this['type'] == 'mall':
                 return ['type' => 'mall', 'decorator' => '', 'mall' => 'mall/product/index?categoryId=' . $this['id']];
 
-            case $this['type'] == 'photo' :
+            case $this['type'] == 'photo':
                 return ['type' => 'photo', 'decorator' => '', 'photo' => 'album?categoryId=' . $this['id']];
 
-            case $this['type'] == 'video' :
+            case $this['type'] == 'video':
                 return ['type' => 'video', 'decorator' => '', 'video' => 'video?categoryId=' . $this['id']];
 
-            case $this['type'] == 'article' :
-            default :
+            case $this['type'] == 'article':
+            default:
                 return ['type' => 'site', 'decorator' => '', 'site' => 'article?categoryId=' . $this['id']];
         }
     }
@@ -152,6 +154,7 @@ class Category extends \miaoxing\plugin\BaseModel
             }
             $parent = $parent->getParent();
         }
+
         return $parent;
     }
 
@@ -168,6 +171,7 @@ class Category extends \miaoxing\plugin\BaseModel
             $categories[] = $category;
             $categories = $category->getChildren()->notDeleted()->findAll()->getTree($categories);
         }
+
         return $categories;
     }
 
@@ -178,6 +182,7 @@ class Category extends \miaoxing\plugin\BaseModel
             $categories[] = $category->toArray();
             $categories = $category->getChildren()->notDeleted()->desc('sort')->findAll()->getTreeToArray($categories);
         }
+
         return $categories;
     }
 
@@ -212,6 +217,7 @@ class Category extends \miaoxing\plugin\BaseModel
     {
         $categories = $this->getAllChildren();
         $categories[] = $this;
+
         return $categories->getAll('id');
     }
 
@@ -231,6 +237,7 @@ class Category extends \miaoxing\plugin\BaseModel
     public function getMenus()
     {
         $this->menus || $this->menus = wei()->menu()->notDeleted()->findAll(['categoryId' => $this['id']]);
+
         return $this->menus;
     }
 
@@ -243,6 +250,7 @@ class Category extends \miaoxing\plugin\BaseModel
         if ($category['id']) {
             return $category['id'];
         }
+
         return 0;
     }
 }
