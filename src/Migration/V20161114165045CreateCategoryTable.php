@@ -11,7 +11,7 @@ class V20161114165045CreateCategoryTable extends BaseMigration
      */
     public function up()
     {
-        $this->scheme->table('category')
+        $this->schema->table('category')
             ->string('id', 64)
             ->string('parentId', 64)
             ->string('binding', 64)->comment('绑定栏目')
@@ -38,6 +38,6 @@ class V20161114165045CreateCategoryTable extends BaseMigration
      */
     public function down()
     {
-        $this->scheme->dropIfExists('category');
+        $this->schema->dropIfExists('category');
     }
 }
