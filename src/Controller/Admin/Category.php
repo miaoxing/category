@@ -73,7 +73,7 @@ class Category extends \miaoxing\plugin\BaseController
         $category = wei()->category()->findOrInitById($req['id']);
         $category->fromArray($req);
 
-        // FIXME 找一个完善的Tree方案
+        // TODO 找一个完善的Tree方案
         // 选择了父栏目,但类型和父栏目一致,同时层级为父栏目加1
         if ($category['parentId']) {
             if ($category['parentId'] == $req['id']) {
