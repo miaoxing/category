@@ -241,9 +241,11 @@ class Category extends \miaoxing\plugin\BaseModel
         return $this->menus;
     }
 
-    /*
+    /**
      * 根据类别名得到类别ID
-     * */
+     * @param $name
+     * @return int
+     */
     public function getCategoryIdByName($name)
     {
         $category = wei()->category()->where('name=?', $name);

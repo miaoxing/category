@@ -41,8 +41,8 @@
           <th>类型</th>
           <th>名称</th>
           <th>简介</th>
-          <th style="width: 120px">顺序</th>
-          <th style="width: 120px">操作</th>
+          <th>顺序</th>
+          <th>操作</th>
         </tr>
         </thead>
         <tbody>
@@ -64,7 +64,8 @@
     <a href="<%= $.url('admin/category/edit', {id: id}) %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>
-    <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/category/destroy', {id: id}) %>" title="删除">
+    <a class="text-danger delete-record" href="javascript:"
+      data-href="<%= $.url('admin/category/destroy', {id: id}) %>" title="删除">
       <i class="fa fa-trash-o bigger-130"></i>
     </a>
   </div>

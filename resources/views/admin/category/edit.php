@@ -32,12 +32,12 @@
       </div>
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="parentId">
+        <label class="col-lg-2 control-label" for="parent-id">
           所属栏目
         </label>
 
         <div class="col-lg-4">
-          <select name="parentId" id="parentId" class="form-control">
+          <select name="parentId" id="parent-id" class="form-control">
             <option value="0">根栏目</option>
           </select>
         </div>
@@ -99,12 +99,12 @@
       </div>
 
       <div class="form-group">
-        <label class="col-lg-2 control-label" for="listTpl">
+        <label class="col-lg-2 control-label" for="list-tpl">
           列表模版
         </label>
 
         <div class="col-lg-4">
-          <select name="listTpl" id="listTpl" class="form-control">
+          <select name="listTpl" id="list-tpl" class="form-control">
             <option value="">默认</option>
             <option value="wasterfalls">瀑布流</option>
             <option value="score">积分</option>
@@ -136,7 +136,7 @@
 <?= $block('js') ?>
 <script>
   require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (linkTo, form) {
-    form.toOptions($('#parentId'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
+    form.toOptions($('#parent-id'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
 
     var category = <?= $category->toJson() ?>;
 
@@ -171,7 +171,7 @@
     $('#image').imageInput();
 
     // 选择父栏目时,栏目类型跟着父栏目改变
-    $('#parentId').change(function () {
+    $('#parent-id').change(function () {
       var type = $(this).find('option:selected').data('type');
       if (type) {
         $('#type').val(type).prop('disabled', true);

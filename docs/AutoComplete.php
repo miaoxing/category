@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\category\docs {
+
     /**
      * @property    \Miaoxing\Category\Service\Category $category
      * @method      \Miaoxing\Category\Service\Category|\Miaoxing\Category\Service\Category[] category()
@@ -11,6 +12,7 @@ namespace plugins\category\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\category\docs\AutoComplete
      */
