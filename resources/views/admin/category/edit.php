@@ -136,7 +136,8 @@
 <?= $block('js') ?>
 <script>
   require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (linkTo, form) {
-    form.toOptions($('#parent-id'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
+    form
+      .toOptions($('#parent-id'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
 
     var category = <?= $category->toJson() ?>;
 
