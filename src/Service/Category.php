@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Category\Service;
 
-use plugins\menu\services\Menu;
+use Miaoxing\Menu\Service\Menu;
 
 /**
  * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
@@ -24,7 +24,7 @@ class Category extends \miaoxing\plugin\BaseModel
     protected $type;
 
     /**
-     * @var Menu|Menu[]
+     * @var Menu|\Miaoxing\Menu\Service\Menu[]
      */
     protected $menus;
 
