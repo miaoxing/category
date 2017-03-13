@@ -25,7 +25,7 @@ class V20161114165045CreateCategoryTable extends BaseMigration
             ->int('sort')
             ->text('linkTo')->comment('linkTo服务配置数组')
             ->bool('enable')->defaults(1)->comment('是否启用')
-            ->timestamps()
+            ->timestampsV1()
             ->bool('canDelete')->defaults(1)
             ->bool('deleted')
             ->timestamp('deleteTime')
