@@ -7,7 +7,7 @@ use Miaoxing\Menu\Service\Menu;
 /**
  * @property \Miaoxing\LinkTo\Service\LinkTo $linkTo
  */
-class Category extends \miaoxing\plugin\BaseModel
+class Category extends \Miaoxing\Plugin\BaseModel
 {
     protected $autoId = true;
 
