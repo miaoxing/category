@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Category\Controller\Admin;
 
-class Category extends \miaoxing\plugin\BaseController
+class Category extends \Miaoxing\Plugin\BaseController
 {
     public function indexAction($req)
     {
