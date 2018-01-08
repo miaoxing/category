@@ -39,12 +39,12 @@ class Category extends \Miaoxing\Plugin\BaseController
                         ];
                 }
 
-                return $this->json('读取列表成功', 1, array(
+                return $this->json('读取列表成功', 1, [
                     'data' => $data,
                     'page' => $req['page'],
                     'rows' => $req['rows'],
                     'records' => $categories->count(),
-                ));
+                ]);
 
             default:
                 return get_defined_vars();
@@ -81,14 +81,14 @@ class Category extends \Miaoxing\Plugin\BaseController
             }
 
             $parent = $category->getParent();
-            $category['type'] = (string)$category['type'];
+            $category['type'] = (string) $category['type'];
             $category['level'] = $parent['level'] + 1;
         }
 
         $category->save();
 
         return $this->suc([
-            'data' => $category->toArray()
+            'data' => $category->toArray(),
         ]);
     }
 
@@ -96,6 +96,7 @@ class Category extends \Miaoxing\Plugin\BaseController
     {
         $category = wei()->category()->notDeleted()->findOneById($req['id']);
         $category->softDelete();
+
         return $this->suc();
     }
 }
