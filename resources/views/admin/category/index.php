@@ -24,7 +24,7 @@
               <option value="">请选择类型</option>
               <option value="index">首页</option>
               <option value="nav">头部导航</option>
-              <?php if ($plugin->isInstalled('mall')) : ?>
+              <?php if ($wei->plugin->isInstalled('mall')) : ?>
                 <option value="personal">个人中心</option>
                 <option value="mall">商城</option>
               <?php endif ?>

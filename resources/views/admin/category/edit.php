@@ -24,7 +24,7 @@
           <select name="type" id="type" class="form-control">
             <option value="">请选择类型</option>
             <option value="index">首页</option>
-            <?php if ($plugin->isInstalled('mall')) : ?>
+            <?php if ($wei->plugin->isInstalled('mall')) : ?>
               <option value="mall">商城</option>
             <?php endif ?>
           </select>
