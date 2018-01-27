@@ -133,7 +133,7 @@
 </div><!-- /.col -->
 <!-- /.row -->
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (linkTo, form) {
     form

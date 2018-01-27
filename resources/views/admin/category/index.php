@@ -71,7 +71,7 @@
   </div>
 </script>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   var types = {
     index: '首页',
