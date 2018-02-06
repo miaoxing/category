@@ -135,7 +135,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator'], function (linkTo, form) {
+  require(['linkTo', 'form', 'ueditor', 'jquery-deparam', 'dataTable', 'validator', 'plugins/admin/js/image-upload'], function (linkTo, form) {
     form
       .toOptions($('#parent-id'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
 
@@ -169,7 +169,7 @@
     });
 
     // 点击选择图片
-    $('#image').imageInput();
+    $('#image').imageUpload();
 
     // 选择父栏目时,栏目类型跟着父栏目改变
     $('#parent-id').change(function () {
