@@ -1,1 +1,3 @@
-<?php require $view->getFile('category:admin/category/edit.php');
+<?php
+
+require $view->getFile('@category/admin/category/edit.php');
