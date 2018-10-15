@@ -27,6 +27,8 @@ class V20161114165045CreateCategoryTable extends BaseMigration
             ->bool('enable')->defaults(1)->comment('是否启用')
             ->timestampsV1()
             ->bool('canDelete')->defaults(1)
+            ->int('pv')
+            ->int('uv')
             ->bool('deleted')
             ->timestamp('deleteTime')
             ->primary('id')
