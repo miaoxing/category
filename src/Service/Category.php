@@ -93,17 +93,17 @@ class Category extends \Miaoxing\Plugin\BaseModel
     {
         switch (true) {
             case $this['type'] == 'mall':
-                return ['type' => 'mall', 'decorator' => '', 'mall' => 'products?categoryId=' . $this['id']];
+                return ['type' => 'mall', 'mall' => 'products?categoryId=' . $this['id']];
 
             case $this['type'] == 'photo':
-                return ['type' => 'photo', 'decorator' => '', 'photo' => 'album?categoryId=' . $this['id']];
+                return ['type' => 'photo', 'photo' => 'album?categoryId=' . $this['id']];
 
             case $this['type'] == 'video':
-                return ['type' => 'video', 'decorator' => '', 'video' => 'video?categoryId=' . $this['id']];
+                return ['type' => 'video', 'video' => 'video?categoryId=' . $this['id']];
 
             case $this['type'] == 'article':
             default:
-                return ['type' => 'site', 'decorator' => '', 'site' => 'article?categoryId=' . $this['id']];
+                return ['type' => 'site', 'site' => 'article?categoryId=' . $this['id']];
         }
     }
 
