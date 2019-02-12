@@ -62,7 +62,7 @@
         <div class="col-lg-4">
           <div class="input-group">
             <input type="text" class="form-control" id="image" name="image">
-                        <span class="input-group-btn">
+                        <span class="input-group-append">
                             <button id="select-thumb" class="btn btn-default" type="button">
                               <i class="fa fa-picture-o"></i>
                               选择图片
