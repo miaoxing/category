@@ -135,7 +135,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/link-to/js/link-to', 'form', 'ueditor', 'jquery-unparam', 'plugins/admin/js/data-table', 'plugins/app/js/validation', 'plugins/admin/js/image-upload'], function (linkTo, form) {
+  require(['plugins/link-to/js/link-to', 'form', 'ueditor', 'plugins/admin/js/data-table', 'plugins/app/js/validation', 'plugins/admin/js/image-upload'], function (linkTo, form) {
     form
       .toOptions($('#parent-id'), <?= json_encode(wei()->category()->notDeleted()->getTreeToArray()) ?>, 'id', 'name');
 
