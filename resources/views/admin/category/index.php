@@ -79,7 +79,7 @@
     personal: '个人中心',
     mall: '商城'
   };
-  require(['plugins/admin/js/data-table', 'form'], function () {
+  require(['plugins/admin/js/data-table', 'plugins/admin/js/form'], function () {
     var recordTable = $('#category-table').dataTable({
       ajax: {
         url: $.queryUrl('admin/category.json')
