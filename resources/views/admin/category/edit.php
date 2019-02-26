@@ -63,7 +63,7 @@
           <div class="input-group">
             <input type="text" class="form-control" id="image" name="image">
                         <span class="input-group-append">
-                            <button id="select-thumb" class="btn btn-default" type="button">
+                            <button id="select-thumb" class="btn btn-secondary" type="button">
                               <i class="fa fa-picture-o"></i>
                               选择图片
                             </button>
@@ -121,7 +121,7 @@
             提交
           </button>
           &nbsp; &nbsp; &nbsp;
-          <a class="btn btn-default" href="<?= $url('admin/category/index') ?>">
+          <a class="btn btn-secondary" href="<?= $url('admin/category/index') ?>">
             <i class="fa fa-undo bigger-110"></i>
             返回列表
           </a>
