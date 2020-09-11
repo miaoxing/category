@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Category;
 
-class Plugin extends \Miaoxing\Plugin\BasePlugin
+class CategoryPlugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '分类';
 
