@@ -9,6 +9,30 @@ use Miaoxing\Plugin\Test\BaseTestCase;
 
 class IdTest extends BaseTestCase
 {
+    public function testGet()
+    {
+        User::loginById(1);
+
+        $category = CategoryModel::save([
+            'name' => '测试'
+        ]);
+
+        $ret = Tester::getAdminApi('categories/' . $category->id);
+        $this->assertRetSuc($ret);
+        $this->assertSame('测试', $ret['data']['name']);
+
+        $category->destroy();
+        $this->expectExceptionObject(new \Exception('Record not found', 404));
+        Tester::getAdminApi('categories/' . $category->id);
+    }
+
+    public function testGet404()
+    {
+        $this->expectExceptionObject(new \Exception('Record not found', 404));
+
+        Tester::getAdminApi('categories/not-found' );
+    }
+
     public function testDelete()
     {
         User::loginById(1);
@@ -19,7 +43,7 @@ class IdTest extends BaseTestCase
         $this->assertRetSuc($ret);
 
         $category->reload();
-        $this->assertNull($category->id);
+        $this->assertTrue($category->isDeleted());
     }
 
     public function testDeleteWithChildren()
@@ -35,6 +59,6 @@ class IdTest extends BaseTestCase
         $this->assertRetSuc($ret);
 
         $subCategory->reload();
-        $this->assertNull($subCategory->id);
+        $this->assertTrue($subCategory->isDeleted());
     }
 }
