@@ -4,5 +4,8 @@
   "private": true,
   "main": "index.js",
   "author": "twinh",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "preset": "jest-preset-miaoxing"
+  }
 }
