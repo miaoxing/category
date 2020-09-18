@@ -9,12 +9,24 @@ use Miaoxing\Plugin\Test\BaseTestCase;
 
 class IdTest extends BaseTestCase
 {
+    public static function setUpBeforeClass(): void
+    {
+        parent::setUpBeforeClass();
+
+        User::loginById(1);
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        User::logout();
+
+        parent::tearDownAfterClass();
+    }
+
     public function testGet()
     {
-        User::loginById(1);
-
         $category = CategoryModel::save([
-            'name' => '测试'
+            'name' => '测试',
         ]);
 
         $ret = Tester::getAdminApi('categories/' . $category->id);
@@ -30,13 +42,11 @@ class IdTest extends BaseTestCase
     {
         $this->expectExceptionObject(new \Exception('Record not found', 404));
 
-        Tester::getAdminApi('categories/not-found' );
+        Tester::getAdminApi('categories/not-found');
     }
 
     public function testPatch()
     {
-        User::loginById(1);
-
         $category = CategoryModel::save();
 
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
@@ -57,8 +67,6 @@ class IdTest extends BaseTestCase
 
     public function testPatchSelfAsParent()
     {
-        User::loginById(1);
-
         $category = CategoryModel::save();
 
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
@@ -67,10 +75,39 @@ class IdTest extends BaseTestCase
         $this->assertRetErr($ret, null, '不能使用自己作为父级分类');
     }
 
+    public function testPatchChangeSubCategoryToRootWillUpdateLevel()
+    {
+        $category = CategoryModel::save();
+        $subCategory = CategoryModel::saveData([
+            'parentId' => $category->id,
+            'level' => 2,
+        ]);
+
+        $ret = Tester::patchAdminApi('categories/' . $subCategory->id, [
+            'parentId' => 0,
+        ]);
+        $this->assertRetSuc($ret);
+
+        $subCategory->reload();
+        $this->assertSame(1, $subCategory->level);
+    }
+
+    public function testPatchCantChangeRootCategoryToSubIfHasChildren()
+    {
+        $category = CategoryModel::save();
+        $subCategory = CategoryModel::saveData([
+            'parentId' => $category->id,
+            'level' => 2,
+        ]);
+
+        $ret = Tester::patchAdminApi('categories/' . $category->id, [
+            'parentId' => $subCategory->id,
+        ]);
+        $this->assertRetErr($ret, null, '当前只支持 2 级分类，该分类已有子分类，不能成为其他分类的子分类');
+    }
+
     public function testDelete()
     {
-        User::loginById(1);
-
         $category = CategoryModel::save();
 
         $ret = Tester::deleteAdminApi('categories/' . $category->id);
@@ -82,8 +119,6 @@ class IdTest extends BaseTestCase
 
     public function testDeleteWithChildren()
     {
-        User::loginById(1);
-
         $category = CategoryModel::save();
         $subCategory = CategoryModel::save([
             'parentId' => $category->id,
