@@ -41,7 +41,8 @@ class IndexTest extends BaseTestCase
         User::loginById(1);
 
         $ret = Tester::postAdminApi('categories', [
-            'id' => '1',
+            'id' => '1', // ignored
+            'level' => '2', // ignored
             'name' => '测试',
             'sort' => '60',
             'description' => '描述',
@@ -51,9 +52,10 @@ class IndexTest extends BaseTestCase
         /** @var CategoryModel $category */
         $category = $ret['data'];
         $this->assertNotEquals('1', $category->id);
-        $this->assertEquals('测试', $category->name);
-        $this->assertEquals(60, $category->sort);
-        $this->assertEquals('描述', $category->description);
+        $this->assertSame('测试', $category->name);
+        $this->assertSame(60, $category->sort);
+        $this->assertSame('描述', $category->description);
+        $this->assertSame(1, $category->level);
     }
 
     public function testPostCreateSubCategory()
@@ -70,5 +72,6 @@ class IndexTest extends BaseTestCase
         /** @var CategoryModel $subCategory */
         $subCategory = $ret['data'];
         $this->assertSame($category->id, $subCategory->parentId);
+        $this->assertSame(2, $subCategory->level);
     }
 }
