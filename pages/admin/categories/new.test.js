@@ -2,13 +2,10 @@ import Page from './new';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import React from 'react';
-import app from '@mxjs/app';
+import app, {url} from '@mxjs/app';
 import $ from 'miaoxing';
 import {waitFor} from '@testing-library/dom';
-
-app.page = {
-  collection: 'admin/categories',
-};
+import '../../../../app/modules/bootstrap';
 
 function createPromise() {
   let res, rej;
@@ -30,8 +27,37 @@ function createPromise() {
   return promise;
 }
 
-describe('Category form', () => {
-  test('new', async () => {
+const originalLocation = window.location;
+
+function setUrl(url) {
+  delete window.location;
+  window.location = {
+    pathname: '/' + url,
+    href: '/' + url,
+    search: '',
+  };
+  // TODO Url 解析出 collection
+  app.page = {
+    collection: url,
+    index: false,
+  };
+}
+
+function resetUrl() {
+  window.location = originalLocation;
+  app.page = {};
+}
+
+describe('admin/categories', () => {
+  beforeEach(() => {
+    setUrl('admin/categories');
+  });
+
+  afterEach(() => {
+    resetUrl();
+  });
+
+  test('form', async () => {
     const promise = createPromise();
     const promise2 = createPromise();
     const promise3 = createPromise();

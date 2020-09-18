@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin/categories form 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/categories/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "rows": 1000,
+        },
+        "url": "/admin-api/categories",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/categories form 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/categories/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "params": Object {
+          "rows": 1000,
+        },
+        "url": "/admin-api/categories",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "description": undefined,
+          "id": undefined,
+          "listTpl": undefined,
+          "name": "测试分类",
+          "parentId": 0,
+          "sort": 50,
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/categories",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
