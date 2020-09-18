@@ -33,6 +33,40 @@ class IdTest extends BaseTestCase
         Tester::getAdminApi('categories/not-found' );
     }
 
+    public function testPatch()
+    {
+        User::loginById(1);
+
+        $category = CategoryModel::save();
+
+        $ret = Tester::patchAdminApi('categories/' . $category->id, [
+            'name' => '测试',
+            'description' => '描述',
+            'sort' => 60,
+        ]);
+
+        /** @var CategoryModel $newCategory */
+        $newCategory = $ret['data'];
+
+        $this->assertSame($category->id, $newCategory->id);
+        $this->assertNotEquals($category->name, $newCategory->name);
+        $this->assertSame('测试', $newCategory->name);
+        $this->assertSame(60, $newCategory->sort);
+        $this->assertSame('描述', $newCategory->description);
+    }
+
+    public function testPatchSelfAsParent()
+    {
+        User::loginById(1);
+
+        $category = CategoryModel::save();
+
+        $ret = Tester::patchAdminApi('categories/' . $category->id, [
+            'parentId' => $category->id,
+        ]);
+        $this->assertRetErr($ret, null, '不能使用自己作为父级分类');
+    }
+
     public function testDelete()
     {
         User::loginById(1);
