@@ -5,24 +5,26 @@ namespace Miaoxing\Category\Metadata;
 /**
  * CategoryTrait
  *
- * @property string $id
- * @property string $parentId
- * @property string $binding 绑定栏目
- * @property bool $level 栏目的层级
- * @property string $type
- * @property string $listTpl
+ * @property int $id
+ * @property int $appId
+ * @property int $parentId
+ * @property int $level 分类的层级
  * @property string $name
  * @property string $image
  * @property string $description
- * @property string $url
  * @property int $sort
- * @property string $linkTo linkTo服务配置数组
- * @property bool $enable 是否启用
- * @property string $createTime
- * @property string $updateTime
- * @property bool $canDelete
- * @property int $deleted
- * @property string $deleteTime
+ * @property string $listTpl
+ * @property array $linkTo linkTo服务配置数组
+ * @property bool $isEnabled 是否启用
+ * @property int $pv
+ * @property int $uv
+ * @property string $createdAt
+ * @property string $updatedAt
+ * @property int $createdBy
+ * @property int $updatedBy
+ * @property string $deletedAt
+ * @property int $deletedBy
+ * @internal will change in the future
  */
 trait CategoryTrait
 {
@@ -31,23 +33,24 @@ trait CategoryTrait
      * @see CastTrait::$casts
      */
     protected $casts = [
-        'id' => 'string',
-        'parentId' => 'string',
-        'binding' => 'string',
-        'level' => 'bool',
-        'type' => 'string',
-        'listTpl' => 'string',
+        'id' => 'int',
+        'app_id' => 'int',
+        'parent_id' => 'int',
+        'level' => 'int',
         'name' => 'string',
         'image' => 'string',
         'description' => 'string',
-        'url' => 'string',
         'sort' => 'int',
-        'linkTo' => 'string',
-        'enable' => 'bool',
-        'createTime' => 'datetime',
-        'updateTime' => 'datetime',
-        'canDelete' => 'bool',
-        'deleted' => 'int',
-        'deleteTime' => 'datetime',
+        'list_tpl' => 'string',
+        'link_to' => 'json',
+        'is_enabled' => 'bool',
+        'pv' => 'int',
+        'uv' => 'int',
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+        'created_by' => 'int',
+        'updated_by' => 'int',
+        'deleted_at' => 'datetime',
+        'deleted_by' => 'int',
     ];
 }

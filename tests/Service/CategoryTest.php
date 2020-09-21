@@ -9,11 +9,5 @@ use Miaoxing\Plugin\Test\BaseTestCase;
  */
 class CategoryTest extends BaseTestCase
 {
-    /**
-     * 获取分类类型
-     */
-    public function testGetTypes()
-    {
-        $this->assertInternalType('array', wei()->category->getTypes());
-    }
+
 }
