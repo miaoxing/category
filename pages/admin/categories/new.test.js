@@ -5,8 +5,9 @@ import React from 'react';
 import {app} from '@mxjs/app';
 import $ from 'miaoxing';
 import {waitFor} from '@testing-library/dom';
-import {createPromise, setUrl, resetUrl} from '@mxjs/test';
-import '../../../../app/modules/bootstrap';
+import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
+
+bootstrap();
 
 describe('admin/categories', () => {
   beforeEach(() => {

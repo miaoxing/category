@@ -3,9 +3,10 @@ import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import React from 'react';
 import $ from 'miaoxing';
-import {createPromise, setUrl, resetUrl} from '@mxjs/test';
+import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 import {app} from '@mxjs/app';
-import '../../../../app/modules/bootstrap';
+
+bootstrap();
 
 describe('admin/categories', () => {
   beforeEach(function () {
