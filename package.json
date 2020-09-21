@@ -7,5 +7,9 @@
   "license": "MIT",
   "jest": {
     "preset": "jest-preset-miaoxing"
+  },
+  "devDependencies": {
+    "@mxjs/test": "^0.1.0",
+    "jest-preset-miaoxing": "^0.2.0"
   }
 }

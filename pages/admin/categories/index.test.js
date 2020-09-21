@@ -1,60 +1,24 @@
 import Index from './index';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import React from 'react';
-import app, {url} from '@mxjs/app';
 import $ from 'miaoxing';
-import {waitFor} from '@testing-library/dom';
+import {createPromise, setUrl, resetUrl} from '@mxjs/test';
+import {app} from '@mxjs/app';
 import '../../../../app/modules/bootstrap';
 
-function createPromise() {
-  let res, rej;
-
-  const promise = new Promise((resolve, reject) => {
-    res = (result) => {
-      resolve(result);
-      return promise;
-    };
-    rej = (result) => {
-      reject(result);
-      return promise;
-    };
-  });
-
-  promise.resolve = res;
-  promise.reject = rej;
-
-  return promise;
-}
-
-const originalLocation = window.location;
-
-function setUrl(url) {
-  delete window.location;
-  window.location = {
-    pathname: '/' + url,
-    href: '/' + url,
-    search: '',
-  };
-  // TODO Url 解析出 collection
-  app.page = {
-    collection: url,
-    index: true,
-  };
-}
-
-function resetUrl() {
-  window.location = originalLocation;
-  app.page = {};
-}
-
 describe('admin/categories', () => {
-  beforeEach(() => {
+  beforeEach(function () {
     setUrl('admin/categories');
+    app.page = {
+      collection: 'admin/categories',
+      index: true
+    }
   });
 
   afterEach(() => {
     resetUrl();
+    app.page = {};
   });
 
   test('index', async () => {
