@@ -8,11 +8,10 @@ import {Form, FormItem, FormAction, Select} from '@mxjs/a-form';
 import api from '@mxjs/api';
 
 export default () => {
-  const [parents, setParents] = useState([{id: 0, name: '根分类'}]);
+  const [parents, setParents] = useState([]);
 
   useEffect(() => {
     api.getCurColl({params: {rows: 1000}, loading: true}).then(ret => {
-      ret.data.unshift(parents[0]);
       setParents(ret.data);
     });
   }, []);
@@ -25,7 +24,7 @@ export default () => {
 
       <Form>
         <FormItem label="父级分类" name="parentId" required>
-          <Select options={parents} labelKey="name" valueKey="id"/>
+          <Select options={parents} labelKey="name" valueKey="id" firstLabel="根分类"/>
         </FormItem>
         <FormItem label="名称" name="name" required/>
         <FormItem label="简介" name="description" type="textarea"/>
