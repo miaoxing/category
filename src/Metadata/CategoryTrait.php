@@ -14,7 +14,7 @@ namespace Miaoxing\Category\Metadata;
  * @property string $description
  * @property int $sort
  * @property string $listTpl
- * @property array $linkTo linkTo服务配置数组
+ * @property string $linkTo linkTo服务配置数组
  * @property bool $isEnabled 是否启用
  * @property int $pv
  * @property int $uv
@@ -42,7 +42,7 @@ trait CategoryTrait
         'description' => 'string',
         'sort' => 'int',
         'list_tpl' => 'string',
-        'link_to' => 'json',
+        'link_to' => 'string',
         'is_enabled' => 'bool',
         'pv' => 'int',
         'uv' => 'int',

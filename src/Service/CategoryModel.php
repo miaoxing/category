@@ -25,9 +25,12 @@ class CategoryModel extends Model
         'link_to' => [],
     ];
 
-    protected $defaultCasts = [
-        'link_to' => 'json',
-    ];
+    public function getCasts(): array
+    {
+        return array_merge(parent::getCasts(), [
+            'link_to' => 'json',
+        ]);
+    }
 
     public function getGuarded()
     {
