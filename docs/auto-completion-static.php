@@ -35,7 +35,7 @@ class CategoryModel
      * Returns the success result with model data
      *
      * @param array $merge
-     * @return array
+     * @return Ret
      * @see Model::toRet
      */
     public static function toRet(array $merge = [])
@@ -216,17 +216,6 @@ class CategoryModel
      * @param array|Req|null $req
      * @return $this
      * @throws \Exception
-     * @deprecated Use `findFromReq` instead
-     * @see Model::findFromRequest
-     */
-    public static function findFromRequest($req = null)
-    {
-    }
-
-    /**
-     * @param array|Req|null $req
-     * @return $this
-     * @throws \Exception
      * @see Model::findFromReq
      */
     public static function findFromReq($req = null)
@@ -244,7 +233,7 @@ class CategoryModel
     }
 
     /**
-     * @return $this|array
+     * @return $this|$this[]|array
      * @see Model::all
      */
     public static function all()
@@ -923,7 +912,7 @@ class CategoryModel
      * Returns the success result with model data
      *
      * @param array $merge
-     * @return array
+     * @return Ret
      * @see Model::toRet
      */
     public function toRet(array $merge = [])
@@ -1104,17 +1093,6 @@ class CategoryModel
      * @param array|Req|null $req
      * @return $this
      * @throws \Exception
-     * @deprecated Use `findFromReq` instead
-     * @see Model::findFromRequest
-     */
-    public function findFromRequest($req = null)
-    {
-    }
-
-    /**
-     * @param array|Req|null $req
-     * @return $this
-     * @throws \Exception
      * @see Model::findFromReq
      */
     public function findFromReq($req = null)
@@ -1132,7 +1110,7 @@ class CategoryModel
     }
 
     /**
-     * @return $this|array
+     * @return $this|$this[]|array
      * @see Model::all
      */
     public function all()
