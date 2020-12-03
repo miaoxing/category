@@ -19,16 +19,16 @@ class CategoryModel extends Model
     use ReqQueryTrait;
 
     protected $data = [
-        'parent_id' => 0,
+        'parentId' => 0,
         'level' => 1,
         'sort' => 50,
-        'link_to' => [],
+        'linkTo' => [],
     ];
 
     public function getCasts(): array
     {
         return array_merge(parent::getCasts(), [
-            'link_to' => 'json',
+            'linkTo' => 'json',
         ]);
     }
 
