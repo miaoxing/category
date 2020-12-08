@@ -18,11 +18,11 @@ namespace Miaoxing\Category\Metadata;
  * @property bool $isEnabled 是否启用
  * @property int $pv
  * @property int $uv
- * @property string $createdAt
- * @property string $updatedAt
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
  * @property int $createdBy
  * @property int $updatedBy
- * @property string $deletedAt
+ * @property string|null $deletedAt
  * @property int $deletedBy
  * @internal will change in the future
  */
@@ -34,23 +34,23 @@ trait CategoryTrait
      */
     protected $casts = [
         'id' => 'int',
-        'app_id' => 'int',
-        'parent_id' => 'int',
+        'appId' => 'int',
+        'parentId' => 'int',
         'level' => 'int',
         'name' => 'string',
         'image' => 'string',
         'description' => 'string',
         'sort' => 'int',
-        'list_tpl' => 'string',
-        'link_to' => 'string',
-        'is_enabled' => 'bool',
+        'listTpl' => 'string',
+        'linkTo' => 'string',
+        'isEnabled' => 'bool',
         'pv' => 'int',
         'uv' => 'int',
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-        'created_by' => 'int',
-        'updated_by' => 'int',
-        'deleted_at' => 'datetime',
-        'deleted_by' => 'int',
+        'createdAt' => 'datetime',
+        'updatedAt' => 'datetime',
+        'createdBy' => 'int',
+        'updatedBy' => 'int',
+        'deletedAt' => 'datetime',
+        'deletedBy' => 'int',
     ];
 }

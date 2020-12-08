@@ -14,7 +14,7 @@ class CategoryModel
      * @param array|callable $returnFields A indexed array specified the fields to return
      * @param callable|null $prepend
      * @return array
-     * @see Model::toArray
+     * @see CategoryModel::toArray
      */
     public static function toArray($returnFields = [], callable $prepend = null)
     {
@@ -25,7 +25,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see Model::saveData
+     * @see CategoryModel::saveData
      */
     public static function saveData($data = [])
     {
@@ -36,7 +36,7 @@ class CategoryModel
      *
      * @param array $merge
      * @return Ret
-     * @see Model::toRet
+     * @see CategoryModel::toRet
      */
     public static function toRet(array $merge = [])
     {
@@ -46,7 +46,7 @@ class CategoryModel
      * Return the record table name
      *
      * @return string
-     * @see Model::getTable
+     * @see CategoryModel::getTable
      */
     public static function getTable()
     {
@@ -57,7 +57,7 @@ class CategoryModel
      *
      * @param array|\ArrayAccess $data
      * @return $this
-     * @see Model::fromArray
+     * @see CategoryModel::fromArray
      */
     public static function fromArray($data)
     {
@@ -68,7 +68,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see Model::save
+     * @see CategoryModel::save
      */
     public static function save($data = [])
     {
@@ -79,7 +79,7 @@ class CategoryModel
      *
      * @param int|string $id
      * @return $this
-     * @see Model::destroy
+     * @see CategoryModel::destroy
      */
     public static function destroy($id = null)
     {
@@ -92,7 +92,7 @@ class CategoryModel
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
-     * @see Model::set
+     * @see CategoryModel::set
      */
     public static function set($name, $value = null, $throwException = true)
     {
@@ -103,7 +103,7 @@ class CategoryModel
      *
      * @param int|string|array|null $id
      * @return $this|null
-     * @see Model::find
+     * @see CategoryModel::find
      */
     public static function find($id)
     {
@@ -115,7 +115,7 @@ class CategoryModel
      * @param int|string $id
      * @return $this
      * @throws \Exception
-     * @see Model::findOrFail
+     * @see CategoryModel::findOrFail
      */
     public static function findOrFail($id)
     {
@@ -127,7 +127,7 @@ class CategoryModel
      * @param int|string $id
      * @param array|object $data
      * @return $this
-     * @see Model::findOrInit
+     * @see CategoryModel::findOrInit
      */
     public static function findOrInit($id = null, $data = [])
     {
@@ -139,7 +139,7 @@ class CategoryModel
      * @param int|string $id
      * @param array $data
      * @return $this
-     * @see Model::findOrCreate
+     * @see CategoryModel::findOrCreate
      */
     public static function findOrCreate($id, $data = [])
     {
@@ -149,7 +149,7 @@ class CategoryModel
      * @param array $attributes
      * @param array $data
      * @return $this
-     * @see Model::findByOrCreate
+     * @see CategoryModel::findByOrCreate
      */
     public static function findByOrCreate($attributes, $data = [])
     {
@@ -160,7 +160,7 @@ class CategoryModel
      *
      * @param array $ids
      * @return $this|$this[]
-     * @see Model::findAll
+     * @see CategoryModel::findAll
      */
     public static function findAll($ids)
     {
@@ -171,7 +171,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|null
-     * @see Model::findBy
+     * @see CategoryModel::findBy
      */
     public static function findBy($column, $operator = null, $value = null)
     {
@@ -182,7 +182,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
-     * @see Model::findAllBy
+     * @see CategoryModel::findAllBy
      */
     public static function findAllBy($column, $operator = null, $value = null)
     {
@@ -192,7 +192,7 @@ class CategoryModel
      * @param array $attributes
      * @param array|object $data
      * @return $this
-     * @see Model::findOrInitBy
+     * @see CategoryModel::findOrInitBy
      */
     public static function findOrInitBy($attributes, $data = [])
     {
@@ -206,7 +206,7 @@ class CategoryModel
      * @param mixed|null $value
      * @return $this
      * @throws \Exception
-     * @see Model::findByOrFail
+     * @see CategoryModel::findByOrFail
      */
     public static function findByOrFail($column, $operator = null, $value = null)
     {
@@ -216,7 +216,7 @@ class CategoryModel
      * @param array|Req|null $req
      * @return $this
      * @throws \Exception
-     * @see Model::findFromReq
+     * @see CategoryModel::findFromReq
      */
     public static function findFromReq($req = null)
     {
@@ -226,7 +226,7 @@ class CategoryModel
      * Executes the generated SQL and returns the found record object or null if not found
      *
      * @return $this|null
-     * @see Model::first
+     * @see CategoryModel::first
      */
     public static function first()
     {
@@ -234,7 +234,7 @@ class CategoryModel
 
     /**
      * @return $this|$this[]|array
-     * @see Model::all
+     * @see CategoryModel::all
      */
     public static function all()
     {
@@ -243,7 +243,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see Model::indexBy
+     * @see CategoryModel::indexBy
      */
     public static function indexBy($column)
     {
@@ -253,9 +253,9 @@ class CategoryModel
      * Returns the name of fields of current table
      *
      * @return array
-     * @see QueryBuilder::getFields
+     * @see CategoryModel::getColumns
      */
-    public static function getFields()
+    public static function getColumns()
     {
     }
 
@@ -266,7 +266,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return array|null
-     * @see QueryBuilder::fetch
+     * @see CategoryModel::fetch
      */
     public static function fetch($column = null, $operator = null, $value = null)
     {
@@ -279,7 +279,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return array
-     * @see QueryBuilder::fetchAll
+     * @see CategoryModel::fetchAll
      */
     public static function fetchAll($column = null, $operator = null, $value = null)
     {
@@ -289,7 +289,7 @@ class CategoryModel
      * @param string $column
      * @param string|null $index
      * @return array
-     * @see QueryBuilder::pluck
+     * @see CategoryModel::pluck
      */
     public static function pluck(string $column, string $index = null)
     {
@@ -299,7 +299,7 @@ class CategoryModel
      * @param int $count
      * @param callable $callback
      * @return bool
-     * @see QueryBuilder::chunk
+     * @see CategoryModel::chunk
      */
     public static function chunk(int $count, callable $callback)
     {
@@ -310,7 +310,7 @@ class CategoryModel
      *
      * @param string $column
      * @return int
-     * @see QueryBuilder::cnt
+     * @see CategoryModel::cnt
      */
     public static function cnt($column = '*')
     {
@@ -322,7 +322,7 @@ class CategoryModel
      * @param array|string $set
      * @param mixed $value
      * @return int
-     * @see QueryBuilder::update
+     * @see CategoryModel::update
      */
     public static function update($set = [], $value = null)
     {
@@ -335,7 +335,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return mixed
-     * @see QueryBuilder::delete
+     * @see CategoryModel::delete
      */
     public static function delete($column = null, $operator = null, $value = null)
     {
@@ -346,7 +346,7 @@ class CategoryModel
      *
      * @param int|float|string $offset The first result to return
      * @return $this
-     * @see QueryBuilder::offset
+     * @see CategoryModel::offset
      */
     public static function offset($offset)
     {
@@ -357,7 +357,7 @@ class CategoryModel
      *
      * @param int|float|string $limit The maximum number of results to retrieve
      * @return $this
-     * @see QueryBuilder::limit
+     * @see CategoryModel::limit
      */
     public static function limit($limit)
     {
@@ -368,7 +368,7 @@ class CategoryModel
      *
      * @param int $page The page number
      * @return $this
-     * @see QueryBuilder::page
+     * @see CategoryModel::page
      */
     public static function page($page)
     {
@@ -380,7 +380,7 @@ class CategoryModel
      *
      * @param array|string $columns the selection expressions
      * @return $this
-     * @see QueryBuilder::select
+     * @see CategoryModel::select
      */
     public static function select($columns = ['*']): self
     {
@@ -389,7 +389,7 @@ class CategoryModel
     /**
      * @param array|string $columns
      * @return $this
-     * @see QueryBuilder::selectDistinct
+     * @see CategoryModel::selectDistinct
      */
     public static function selectDistinct($columns)
     {
@@ -398,7 +398,7 @@ class CategoryModel
     /**
      * @param string $expression
      * @return $this
-     * @see QueryBuilder::selectRaw
+     * @see CategoryModel::selectRaw
      */
     public static function selectRaw($expression)
     {
@@ -410,7 +410,7 @@ class CategoryModel
      *
      * @param array|string $columns
      * @return $this
-     * @see QueryBuilder::selectExcept
+     * @see CategoryModel::selectExcept
      */
     public static function selectExcept($columns)
     {
@@ -422,7 +422,7 @@ class CategoryModel
      * @param string $table
      * @param string|null $alias
      * @return $this
-     * @see QueryBuilder::from
+     * @see CategoryModel::from
      */
     public static function from($table, $alias = null): self
     {
@@ -432,7 +432,7 @@ class CategoryModel
      * @param string $table
      * @param mixed|null $alias
      * @return $this
-     * @see QueryBuilder::table
+     * @see CategoryModel::table
      */
     public static function table(string $table, $alias = null): self
     {
@@ -447,7 +447,7 @@ class CategoryModel
      * @param string $second
      * @param string $type
      * @return $this
-     * @see QueryBuilder::join
+     * @see CategoryModel::join
      */
     public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER')
     {
@@ -461,7 +461,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::innerJoin
+     * @see CategoryModel::innerJoin
      */
     public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -475,7 +475,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::leftJoin
+     * @see CategoryModel::leftJoin
      */
     public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -489,7 +489,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::rightJoin
+     * @see CategoryModel::rightJoin
      */
     public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -510,7 +510,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::where
+     * @see CategoryModel::where
      */
     public static function where($column = null, $operator = null, $value = null)
     {
@@ -520,7 +520,7 @@ class CategoryModel
      * @param string $expression
      * @param mixed $params
      * @return $this
-     * @see QueryBuilder::whereRaw
+     * @see CategoryModel::whereRaw
      */
     public static function whereRaw($expression, $params = [])
     {
@@ -530,7 +530,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereBetween
+     * @see CategoryModel::whereBetween
      */
     public static function whereBetween($column, array $params)
     {
@@ -540,17 +540,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::orWhereBetween
-     */
-    public static function orWhereBetween($column, array $params)
-    {
-    }
-
-    /**
-     * @param string $column
-     * @param array $params
-     * @return $this
-     * @see QueryBuilder::whereNotBetween
+     * @see CategoryModel::whereNotBetween
      */
     public static function whereNotBetween($column, array $params)
     {
@@ -560,7 +550,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereIn
+     * @see CategoryModel::whereIn
      */
     public static function whereIn($column, array $params)
     {
@@ -570,7 +560,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereNotIn
+     * @see CategoryModel::whereNotIn
      */
     public static function whereNotIn($column, array $params)
     {
@@ -579,7 +569,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see QueryBuilder::whereNull
+     * @see CategoryModel::whereNull
      */
     public static function whereNull($column)
     {
@@ -588,7 +578,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see QueryBuilder::whereNotNULL
+     * @see CategoryModel::whereNotNULL
      */
     public static function whereNotNULL($column)
     {
@@ -599,7 +589,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereDate
+     * @see CategoryModel::whereDate
      */
     public static function whereDate($column, $opOrValue, $value = null)
     {
@@ -610,7 +600,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereMonth
+     * @see CategoryModel::whereMonth
      */
     public static function whereMonth($column, $opOrValue, $value = null)
     {
@@ -621,7 +611,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereDay
+     * @see CategoryModel::whereDay
      */
     public static function whereDay($column, $opOrValue, $value = null)
     {
@@ -632,7 +622,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereYear
+     * @see CategoryModel::whereYear
      */
     public static function whereYear($column, $opOrValue, $value = null)
     {
@@ -643,7 +633,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereTime
+     * @see CategoryModel::whereTime
      */
     public static function whereTime($column, $opOrValue, $value = null)
     {
@@ -654,7 +644,7 @@ class CategoryModel
      * @param string $opOrColumn2
      * @param string|null $column2
      * @return $this
-     * @see QueryBuilder::whereColumn
+     * @see CategoryModel::whereColumn
      */
     public static function whereColumn($column, $opOrColumn2, $column2 = null)
     {
@@ -667,7 +657,7 @@ class CategoryModel
      * @param string $value
      * @param string $condition
      * @return $this
-     * @see QueryBuilder::whereContains
+     * @see CategoryModel::whereContains
      */
     public static function whereContains($column, $value, string $condition = 'AND')
     {
@@ -678,7 +668,7 @@ class CategoryModel
      * @param mixed $value
      * @param string $condition
      * @return $this
-     * @see QueryBuilder::whereNotContains
+     * @see CategoryModel::whereNotContains
      */
     public static function whereNotContains($column, $value, string $condition = 'OR')
     {
@@ -690,7 +680,7 @@ class CategoryModel
      *
      * @param mixed $column the grouping column
      * @return $this
-     * @see QueryBuilder::groupBy
+     * @see CategoryModel::groupBy
      */
     public static function groupBy($column)
     {
@@ -705,7 +695,7 @@ class CategoryModel
      * @param mixed|null $value
      * @param mixed $condition
      * @return $this
-     * @see QueryBuilder::having
+     * @see CategoryModel::having
      */
     public static function having($column, $operator, $value = null, $condition = 'AND')
     {
@@ -718,7 +708,7 @@ class CategoryModel
      * @param string $column the ordering expression
      * @param string $order the ordering direction
      * @return $this
-     * @see QueryBuilder::orderBy
+     * @see CategoryModel::orderBy
      */
     public static function orderBy($column, $order = 'ASC')
     {
@@ -729,7 +719,7 @@ class CategoryModel
      *
      * @param string $field The name of field
      * @return $this
-     * @see QueryBuilder::desc
+     * @see CategoryModel::desc
      */
     public static function desc($field)
     {
@@ -740,26 +730,15 @@ class CategoryModel
      *
      * @param string $field The name of field
      * @return $this
-     * @see QueryBuilder::asc
+     * @see CategoryModel::asc
      */
     public static function asc($field)
     {
     }
 
     /**
-     * Reset single SQL part
-     *
-     * @param string $name
      * @return $this
-     * @see QueryBuilder::resetSqlPart
-     */
-    public static function resetSqlPart($name)
-    {
-    }
-
-    /**
-     * @return $this
-     * @see QueryBuilder::forUpdate
+     * @see CategoryModel::forUpdate
      */
     public static function forUpdate()
     {
@@ -767,7 +746,7 @@ class CategoryModel
 
     /**
      * @return $this
-     * @see QueryBuilder::forShare
+     * @see CategoryModel::forShare
      */
     public static function forShare()
     {
@@ -776,7 +755,7 @@ class CategoryModel
     /**
      * @param string|bool $lock
      * @return $this
-     * @see QueryBuilder::lock
+     * @see CategoryModel::lock
      */
     public static function lock($lock)
     {
@@ -787,7 +766,7 @@ class CategoryModel
      * @param callable $callback
      * @param callable|null $default
      * @return $this
-     * @see QueryBuilder::when
+     * @see CategoryModel::when
      */
     public static function when($value, $callback, callable $default = null)
     {
@@ -798,18 +777,27 @@ class CategoryModel
      * @param callable $callback
      * @param callable|null $default
      * @return $this
-     * @see QueryBuilder::unless
+     * @see CategoryModel::unless
      */
     public static function unless($value, callable $callback, callable $default = null)
     {
     }
 
     /**
-     * @param callable $converter
+     * @param callable|null $converter
      * @return $this
-     * @see QueryBuilder::setInputIdentifierConverter
+     * @see CategoryModel::setDbKeyConverter
      */
-    public static function setInputIdentifierConverter(callable $converter)
+    public static function setDbKeyConverter(callable $converter = null)
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see CategoryModel::setPhpKeyConverter
+     */
+    public static function setPhpKeyConverter(callable $converter = null)
     {
     }
 
@@ -818,7 +806,7 @@ class CategoryModel
      *
      * @param false|int|null $seconds
      * @return $this
-     * @see QueryBuilder::cache
+     * @see CategoryModel::cache
      */
     public static function cache($seconds = null)
     {
@@ -827,13 +815,15 @@ class CategoryModel
     /**
      * @param array|string|true $scopes
      * @return $this
-     * @see Model::unscoped
+     * @see CategoryModel::unscoped
      */
     public static function unscoped($scopes = [])
     {
     }
 
     /**
+     * Really remove the record from database
+     *
      * @param mixed $conditions
      * @return $this
      * @see CategoryModel::reallyDestroy
@@ -843,6 +833,8 @@ class CategoryModel
     }
 
     /**
+     * Add a query to filter soft deleted records
+     *
      * @return $this
      * @see CategoryModel::withoutDeleted
      */
@@ -851,6 +843,8 @@ class CategoryModel
     }
 
     /**
+     * Add a query to return only deleted records
+     *
      * @return $this
      * @see CategoryModel::onlyDeleted
      */
@@ -859,6 +853,8 @@ class CategoryModel
     }
 
     /**
+     * Remove "withoutDeleted" in the query, expect to return all records
+     *
      * @return $this
      * @see CategoryModel::withDeleted
      */
@@ -891,7 +887,7 @@ class CategoryModel
      * @param array|callable $returnFields A indexed array specified the fields to return
      * @param callable|null $prepend
      * @return array
-     * @see Model::toArray
+     * @see CategoryModel::toArray
      */
     public function toArray($returnFields = [], callable $prepend = null)
     {
@@ -902,7 +898,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see Model::saveData
+     * @see CategoryModel::saveData
      */
     public function saveData($data = [])
     {
@@ -913,7 +909,7 @@ class CategoryModel
      *
      * @param array $merge
      * @return Ret
-     * @see Model::toRet
+     * @see CategoryModel::toRet
      */
     public function toRet(array $merge = [])
     {
@@ -923,7 +919,7 @@ class CategoryModel
      * Return the record table name
      *
      * @return string
-     * @see Model::getTable
+     * @see CategoryModel::getTable
      */
     public function getTable()
     {
@@ -934,7 +930,7 @@ class CategoryModel
      *
      * @param array|\ArrayAccess $data
      * @return $this
-     * @see Model::fromArray
+     * @see CategoryModel::fromArray
      */
     public function fromArray($data)
     {
@@ -945,7 +941,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see Model::save
+     * @see CategoryModel::save
      */
     public function save($data = [])
     {
@@ -956,7 +952,7 @@ class CategoryModel
      *
      * @param int|string $id
      * @return $this
-     * @see Model::destroy
+     * @see CategoryModel::destroy
      */
     public function destroy($id = null)
     {
@@ -969,7 +965,7 @@ class CategoryModel
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
-     * @see Model::set
+     * @see CategoryModel::set
      */
     public function set($name, $value = null, $throwException = true)
     {
@@ -980,7 +976,7 @@ class CategoryModel
      *
      * @param int|string|array|null $id
      * @return $this|null
-     * @see Model::find
+     * @see CategoryModel::find
      */
     public function find($id)
     {
@@ -992,7 +988,7 @@ class CategoryModel
      * @param int|string $id
      * @return $this
      * @throws \Exception
-     * @see Model::findOrFail
+     * @see CategoryModel::findOrFail
      */
     public function findOrFail($id)
     {
@@ -1004,7 +1000,7 @@ class CategoryModel
      * @param int|string $id
      * @param array|object $data
      * @return $this
-     * @see Model::findOrInit
+     * @see CategoryModel::findOrInit
      */
     public function findOrInit($id = null, $data = [])
     {
@@ -1016,7 +1012,7 @@ class CategoryModel
      * @param int|string $id
      * @param array $data
      * @return $this
-     * @see Model::findOrCreate
+     * @see CategoryModel::findOrCreate
      */
     public function findOrCreate($id, $data = [])
     {
@@ -1026,7 +1022,7 @@ class CategoryModel
      * @param array $attributes
      * @param array $data
      * @return $this
-     * @see Model::findByOrCreate
+     * @see CategoryModel::findByOrCreate
      */
     public function findByOrCreate($attributes, $data = [])
     {
@@ -1037,7 +1033,7 @@ class CategoryModel
      *
      * @param array $ids
      * @return $this|$this[]
-     * @see Model::findAll
+     * @see CategoryModel::findAll
      */
     public function findAll($ids)
     {
@@ -1048,7 +1044,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|null
-     * @see Model::findBy
+     * @see CategoryModel::findBy
      */
     public function findBy($column, $operator = null, $value = null)
     {
@@ -1059,7 +1055,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
-     * @see Model::findAllBy
+     * @see CategoryModel::findAllBy
      */
     public function findAllBy($column, $operator = null, $value = null)
     {
@@ -1069,7 +1065,7 @@ class CategoryModel
      * @param array $attributes
      * @param array|object $data
      * @return $this
-     * @see Model::findOrInitBy
+     * @see CategoryModel::findOrInitBy
      */
     public function findOrInitBy($attributes, $data = [])
     {
@@ -1083,7 +1079,7 @@ class CategoryModel
      * @param mixed|null $value
      * @return $this
      * @throws \Exception
-     * @see Model::findByOrFail
+     * @see CategoryModel::findByOrFail
      */
     public function findByOrFail($column, $operator = null, $value = null)
     {
@@ -1093,7 +1089,7 @@ class CategoryModel
      * @param array|Req|null $req
      * @return $this
      * @throws \Exception
-     * @see Model::findFromReq
+     * @see CategoryModel::findFromReq
      */
     public function findFromReq($req = null)
     {
@@ -1103,7 +1099,7 @@ class CategoryModel
      * Executes the generated SQL and returns the found record object or null if not found
      *
      * @return $this|null
-     * @see Model::first
+     * @see CategoryModel::first
      */
     public function first()
     {
@@ -1111,7 +1107,7 @@ class CategoryModel
 
     /**
      * @return $this|$this[]|array
-     * @see Model::all
+     * @see CategoryModel::all
      */
     public function all()
     {
@@ -1120,7 +1116,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see Model::indexBy
+     * @see CategoryModel::indexBy
      */
     public function indexBy($column)
     {
@@ -1130,9 +1126,9 @@ class CategoryModel
      * Returns the name of fields of current table
      *
      * @return array
-     * @see QueryBuilder::getFields
+     * @see CategoryModel::getColumns
      */
-    public function getFields()
+    public function getColumns()
     {
     }
 
@@ -1143,7 +1139,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return array|null
-     * @see QueryBuilder::fetch
+     * @see CategoryModel::fetch
      */
     public function fetch($column = null, $operator = null, $value = null)
     {
@@ -1156,7 +1152,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return array
-     * @see QueryBuilder::fetchAll
+     * @see CategoryModel::fetchAll
      */
     public function fetchAll($column = null, $operator = null, $value = null)
     {
@@ -1166,7 +1162,7 @@ class CategoryModel
      * @param string $column
      * @param string|null $index
      * @return array
-     * @see QueryBuilder::pluck
+     * @see CategoryModel::pluck
      */
     public function pluck(string $column, string $index = null)
     {
@@ -1176,7 +1172,7 @@ class CategoryModel
      * @param int $count
      * @param callable $callback
      * @return bool
-     * @see QueryBuilder::chunk
+     * @see CategoryModel::chunk
      */
     public function chunk(int $count, callable $callback)
     {
@@ -1187,7 +1183,7 @@ class CategoryModel
      *
      * @param string $column
      * @return int
-     * @see QueryBuilder::cnt
+     * @see CategoryModel::cnt
      */
     public function cnt($column = '*')
     {
@@ -1199,7 +1195,7 @@ class CategoryModel
      * @param array|string $set
      * @param mixed $value
      * @return int
-     * @see QueryBuilder::update
+     * @see CategoryModel::update
      */
     public function update($set = [], $value = null)
     {
@@ -1212,7 +1208,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return mixed
-     * @see QueryBuilder::delete
+     * @see CategoryModel::delete
      */
     public function delete($column = null, $operator = null, $value = null)
     {
@@ -1223,7 +1219,7 @@ class CategoryModel
      *
      * @param int|float|string $offset The first result to return
      * @return $this
-     * @see QueryBuilder::offset
+     * @see CategoryModel::offset
      */
     public function offset($offset)
     {
@@ -1234,7 +1230,7 @@ class CategoryModel
      *
      * @param int|float|string $limit The maximum number of results to retrieve
      * @return $this
-     * @see QueryBuilder::limit
+     * @see CategoryModel::limit
      */
     public function limit($limit)
     {
@@ -1245,7 +1241,7 @@ class CategoryModel
      *
      * @param int $page The page number
      * @return $this
-     * @see QueryBuilder::page
+     * @see CategoryModel::page
      */
     public function page($page)
     {
@@ -1257,7 +1253,7 @@ class CategoryModel
      *
      * @param array|string $columns the selection expressions
      * @return $this
-     * @see QueryBuilder::select
+     * @see CategoryModel::select
      */
     public function select($columns = ['*']): self
     {
@@ -1266,7 +1262,7 @@ class CategoryModel
     /**
      * @param array|string $columns
      * @return $this
-     * @see QueryBuilder::selectDistinct
+     * @see CategoryModel::selectDistinct
      */
     public function selectDistinct($columns)
     {
@@ -1275,7 +1271,7 @@ class CategoryModel
     /**
      * @param string $expression
      * @return $this
-     * @see QueryBuilder::selectRaw
+     * @see CategoryModel::selectRaw
      */
     public function selectRaw($expression)
     {
@@ -1287,7 +1283,7 @@ class CategoryModel
      *
      * @param array|string $columns
      * @return $this
-     * @see QueryBuilder::selectExcept
+     * @see CategoryModel::selectExcept
      */
     public function selectExcept($columns)
     {
@@ -1299,7 +1295,7 @@ class CategoryModel
      * @param string $table
      * @param string|null $alias
      * @return $this
-     * @see QueryBuilder::from
+     * @see CategoryModel::from
      */
     public function from($table, $alias = null): self
     {
@@ -1309,7 +1305,7 @@ class CategoryModel
      * @param string $table
      * @param mixed|null $alias
      * @return $this
-     * @see QueryBuilder::table
+     * @see CategoryModel::table
      */
     public function table(string $table, $alias = null): self
     {
@@ -1324,7 +1320,7 @@ class CategoryModel
      * @param string $second
      * @param string $type
      * @return $this
-     * @see QueryBuilder::join
+     * @see CategoryModel::join
      */
     public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER')
     {
@@ -1338,7 +1334,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::innerJoin
+     * @see CategoryModel::innerJoin
      */
     public function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -1352,7 +1348,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::leftJoin
+     * @see CategoryModel::leftJoin
      */
     public function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -1366,7 +1362,7 @@ class CategoryModel
      * @param string $operator
      * @param string|null $second
      * @return $this
-     * @see QueryBuilder::rightJoin
+     * @see CategoryModel::rightJoin
      */
     public function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null)
     {
@@ -1387,7 +1383,7 @@ class CategoryModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::where
+     * @see CategoryModel::where
      */
     public function where($column = null, $operator = null, $value = null)
     {
@@ -1397,7 +1393,7 @@ class CategoryModel
      * @param string $expression
      * @param mixed $params
      * @return $this
-     * @see QueryBuilder::whereRaw
+     * @see CategoryModel::whereRaw
      */
     public function whereRaw($expression, $params = [])
     {
@@ -1407,7 +1403,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereBetween
+     * @see CategoryModel::whereBetween
      */
     public function whereBetween($column, array $params)
     {
@@ -1417,17 +1413,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::orWhereBetween
-     */
-    public function orWhereBetween($column, array $params)
-    {
-    }
-
-    /**
-     * @param string $column
-     * @param array $params
-     * @return $this
-     * @see QueryBuilder::whereNotBetween
+     * @see CategoryModel::whereNotBetween
      */
     public function whereNotBetween($column, array $params)
     {
@@ -1437,7 +1423,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereIn
+     * @see CategoryModel::whereIn
      */
     public function whereIn($column, array $params)
     {
@@ -1447,7 +1433,7 @@ class CategoryModel
      * @param string $column
      * @param array $params
      * @return $this
-     * @see QueryBuilder::whereNotIn
+     * @see CategoryModel::whereNotIn
      */
     public function whereNotIn($column, array $params)
     {
@@ -1456,7 +1442,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see QueryBuilder::whereNull
+     * @see CategoryModel::whereNull
      */
     public function whereNull($column)
     {
@@ -1465,7 +1451,7 @@ class CategoryModel
     /**
      * @param string $column
      * @return $this
-     * @see QueryBuilder::whereNotNULL
+     * @see CategoryModel::whereNotNULL
      */
     public function whereNotNULL($column)
     {
@@ -1476,7 +1462,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereDate
+     * @see CategoryModel::whereDate
      */
     public function whereDate($column, $opOrValue, $value = null)
     {
@@ -1487,7 +1473,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereMonth
+     * @see CategoryModel::whereMonth
      */
     public function whereMonth($column, $opOrValue, $value = null)
     {
@@ -1498,7 +1484,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereDay
+     * @see CategoryModel::whereDay
      */
     public function whereDay($column, $opOrValue, $value = null)
     {
@@ -1509,7 +1495,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereYear
+     * @see CategoryModel::whereYear
      */
     public function whereYear($column, $opOrValue, $value = null)
     {
@@ -1520,7 +1506,7 @@ class CategoryModel
      * @param mixed $opOrValue
      * @param mixed|null $value
      * @return $this
-     * @see QueryBuilder::whereTime
+     * @see CategoryModel::whereTime
      */
     public function whereTime($column, $opOrValue, $value = null)
     {
@@ -1531,7 +1517,7 @@ class CategoryModel
      * @param string $opOrColumn2
      * @param string|null $column2
      * @return $this
-     * @see QueryBuilder::whereColumn
+     * @see CategoryModel::whereColumn
      */
     public function whereColumn($column, $opOrColumn2, $column2 = null)
     {
@@ -1544,7 +1530,7 @@ class CategoryModel
      * @param string $value
      * @param string $condition
      * @return $this
-     * @see QueryBuilder::whereContains
+     * @see CategoryModel::whereContains
      */
     public function whereContains($column, $value, string $condition = 'AND')
     {
@@ -1555,7 +1541,7 @@ class CategoryModel
      * @param mixed $value
      * @param string $condition
      * @return $this
-     * @see QueryBuilder::whereNotContains
+     * @see CategoryModel::whereNotContains
      */
     public function whereNotContains($column, $value, string $condition = 'OR')
     {
@@ -1567,7 +1553,7 @@ class CategoryModel
      *
      * @param mixed $column the grouping column
      * @return $this
-     * @see QueryBuilder::groupBy
+     * @see CategoryModel::groupBy
      */
     public function groupBy($column)
     {
@@ -1582,7 +1568,7 @@ class CategoryModel
      * @param mixed|null $value
      * @param mixed $condition
      * @return $this
-     * @see QueryBuilder::having
+     * @see CategoryModel::having
      */
     public function having($column, $operator, $value = null, $condition = 'AND')
     {
@@ -1595,7 +1581,7 @@ class CategoryModel
      * @param string $column the ordering expression
      * @param string $order the ordering direction
      * @return $this
-     * @see QueryBuilder::orderBy
+     * @see CategoryModel::orderBy
      */
     public function orderBy($column, $order = 'ASC')
     {
@@ -1606,7 +1592,7 @@ class CategoryModel
      *
      * @param string $field The name of field
      * @return $this
-     * @see QueryBuilder::desc
+     * @see CategoryModel::desc
      */
     public function desc($field)
     {
@@ -1617,26 +1603,15 @@ class CategoryModel
      *
      * @param string $field The name of field
      * @return $this
-     * @see QueryBuilder::asc
+     * @see CategoryModel::asc
      */
     public function asc($field)
     {
     }
 
     /**
-     * Reset single SQL part
-     *
-     * @param string $name
      * @return $this
-     * @see QueryBuilder::resetSqlPart
-     */
-    public function resetSqlPart($name)
-    {
-    }
-
-    /**
-     * @return $this
-     * @see QueryBuilder::forUpdate
+     * @see CategoryModel::forUpdate
      */
     public function forUpdate()
     {
@@ -1644,7 +1619,7 @@ class CategoryModel
 
     /**
      * @return $this
-     * @see QueryBuilder::forShare
+     * @see CategoryModel::forShare
      */
     public function forShare()
     {
@@ -1653,7 +1628,7 @@ class CategoryModel
     /**
      * @param string|bool $lock
      * @return $this
-     * @see QueryBuilder::lock
+     * @see CategoryModel::lock
      */
     public function lock($lock)
     {
@@ -1664,7 +1639,7 @@ class CategoryModel
      * @param callable $callback
      * @param callable|null $default
      * @return $this
-     * @see QueryBuilder::when
+     * @see CategoryModel::when
      */
     public function when($value, $callback, callable $default = null)
     {
@@ -1675,18 +1650,27 @@ class CategoryModel
      * @param callable $callback
      * @param callable|null $default
      * @return $this
-     * @see QueryBuilder::unless
+     * @see CategoryModel::unless
      */
     public function unless($value, callable $callback, callable $default = null)
     {
     }
 
     /**
-     * @param callable $converter
+     * @param callable|null $converter
      * @return $this
-     * @see QueryBuilder::setInputIdentifierConverter
+     * @see CategoryModel::setDbKeyConverter
      */
-    public function setInputIdentifierConverter(callable $converter)
+    public function setDbKeyConverter(callable $converter = null)
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see CategoryModel::setPhpKeyConverter
+     */
+    public function setPhpKeyConverter(callable $converter = null)
     {
     }
 
@@ -1695,7 +1679,7 @@ class CategoryModel
      *
      * @param false|int|null $seconds
      * @return $this
-     * @see QueryBuilder::cache
+     * @see CategoryModel::cache
      */
     public function cache($seconds = null)
     {
@@ -1704,13 +1688,15 @@ class CategoryModel
     /**
      * @param array|string|true $scopes
      * @return $this
-     * @see Model::unscoped
+     * @see CategoryModel::unscoped
      */
     public function unscoped($scopes = [])
     {
     }
 
     /**
+     * Really remove the record from database
+     *
      * @param mixed $conditions
      * @return $this
      * @see CategoryModel::reallyDestroy
@@ -1720,6 +1706,8 @@ class CategoryModel
     }
 
     /**
+     * Add a query to filter soft deleted records
+     *
      * @return $this
      * @see CategoryModel::withoutDeleted
      */
@@ -1728,6 +1716,8 @@ class CategoryModel
     }
 
     /**
+     * Add a query to return only deleted records
+     *
      * @return $this
      * @see CategoryModel::onlyDeleted
      */
@@ -1736,6 +1726,8 @@ class CategoryModel
     }
 
     /**
+     * Remove "withoutDeleted" in the query, expect to return all records
+     *
      * @return $this
      * @see CategoryModel::withDeleted
      */

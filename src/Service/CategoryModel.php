@@ -3,7 +3,9 @@
 namespace Miaoxing\Category\Service;
 
 use Miaoxing\Category\Metadata\CategoryTrait;
+use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\GetSetTrait;
+use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 use Miaoxing\Plugin\Service\Model;
@@ -12,7 +14,7 @@ use Miaoxing\Plugin\Service\Model;
  * @property CategoryModel $parent
  * @property CategoryModel[]|CategoryModel $children
  */
-class CategoryModel extends Model
+class CategoryModel extends BaseModel
 {
     use CategoryTrait;
     use SoftDeleteTrait;
@@ -27,14 +29,16 @@ class CategoryModel extends Model
 
     public function getCasts(): array
     {
-        return array_merge(parent::getCasts(), [
+        return array_merge($this->casts, [
             'linkTo' => 'json',
         ]);
     }
 
     public function getGuarded()
     {
-        return array_merge(parent::getGuarded(), ['level']);
+        return array_merge($this->guarded, [
+            'level',
+        ]);
     }
 
     public function afterDestroy()
