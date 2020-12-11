@@ -25,7 +25,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see CategoryModel::saveData
+     * @see CategoryModel::saveAttributes
      */
     public static function saveData($data = [])
     {
@@ -806,7 +806,7 @@ class CategoryModel
      *
      * @param false|int|null $seconds
      * @return $this
-     * @see CategoryModel::cache
+     * @see CategoryModel::setCacheTime
      */
     public static function cache($seconds = null)
     {
@@ -898,7 +898,7 @@ class CategoryModel
      *
      * @param array $data
      * @return $this
-     * @see CategoryModel::saveData
+     * @see CategoryModel::saveAttributes
      */
     public function saveData($data = [])
     {
@@ -1679,7 +1679,7 @@ class CategoryModel
      *
      * @param false|int|null $seconds
      * @return $this
-     * @see CategoryModel::cache
+     * @see CategoryModel::setCacheTime
      */
     public function cache($seconds = null)
     {

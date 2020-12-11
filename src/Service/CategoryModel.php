@@ -20,7 +20,7 @@ class CategoryModel extends BaseModel
     use SoftDeleteTrait;
     use ReqQueryTrait;
 
-    protected $data = [
+    protected $attributes = [
         'parentId' => 0,
         'level' => 1,
         'sort' => 50,

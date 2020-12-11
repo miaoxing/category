@@ -78,7 +78,7 @@ class IdTest extends BaseTestCase
     public function testPatchChangeSubCategoryToRootWillUpdateLevel()
     {
         $category = CategoryModel::save();
-        $subCategory = CategoryModel::saveData([
+        $subCategory = CategoryModel::saveAttributes([
             'parentId' => $category->id,
             'level' => 2,
         ]);
@@ -95,7 +95,7 @@ class IdTest extends BaseTestCase
     public function testPatchCantChangeRootCategoryToSubIfHasChildren()
     {
         $category = CategoryModel::save();
-        $subCategory = CategoryModel::saveData([
+        $subCategory = CategoryModel::saveAttributes([
             'parentId' => $category->id,
             'level' => 2,
         ]);
