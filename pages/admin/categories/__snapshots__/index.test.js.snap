@@ -6,7 +6,7 @@ exports[`admin/categories index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/categories?page=1&rows=20",
+        "url": "/admin-api/categories?page=1&limit=20",
       },
     ],
   ],

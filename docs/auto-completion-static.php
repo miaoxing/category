@@ -9,6 +9,17 @@ class Category
 class CategoryModel
 {
     /**
+     * Set each attribute value, without checking whether the column is fillable, and save the model
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see CategoryModel::saveAttributes
+     */
+    public static function saveAttributes(iterable $attributes = []): self
+    {
+    }
+
+    /**
      * Returns the record data as array
      *
      * @param array|callable $returnFields A indexed array specified the fields to return
@@ -16,18 +27,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::toArray
      */
-    public static function toArray($returnFields = [], callable $prepend = null)
-    {
-    }
-
-    /**
-     * 不经过fillable检查,设置数据并保存
-     *
-     * @param array $data
-     * @return $this
-     * @see CategoryModel::saveAttributes
-     */
-    public static function saveData($data = [])
+    public static function toArray($returnFields = [], callable $prepend = null): array
     {
     }
 
@@ -38,7 +38,7 @@ class CategoryModel
      * @return Ret
      * @see CategoryModel::toRet
      */
-    public static function toRet(array $merge = [])
+    public static function toRet(array $merge = []): \Wei\Ret
     {
     }
 
@@ -48,29 +48,29 @@ class CategoryModel
      * @return string
      * @see CategoryModel::getTable
      */
-    public static function getTable()
+    public static function getTable(): string
     {
     }
 
     /**
      * Import a PHP array in this record
      *
-     * @param array|\ArrayAccess $data
+     * @param iterable $array
      * @return $this
      * @see CategoryModel::fromArray
      */
-    public static function fromArray($data)
+    public static function fromArray(iterable $array): self
     {
     }
 
     /**
      * Save the record or data to database
      *
-     * @param array $data
+     * @param iterable $attributes
      * @return $this
      * @see CategoryModel::save
      */
-    public static function save($data = [])
+    public static function save(iterable $attributes = []): self
     {
     }
 
@@ -81,20 +81,20 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::destroy
      */
-    public static function destroy($id = null)
+    public static function destroy($id = null): self
     {
     }
 
     /**
      * Set the record field value
      *
-     * @param string $name
+     * @param string|int $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
      * @see CategoryModel::set
      */
-    public static function set($name, $value = null, $throwException = true)
+    public static function set($name, $value, bool $throwException = true)
     {
     }
 
@@ -105,7 +105,7 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::find
      */
-    public static function find($id)
+    public static function find($id): ?self
     {
     }
 
@@ -117,41 +117,41 @@ class CategoryModel
      * @throws \Exception
      * @see CategoryModel::findOrFail
      */
-    public static function findOrFail($id)
+    public static function findOrFail($id): self
     {
     }
 
     /**
-     * Find a record by primary key, or init with the specified data if record not found
+     * Find a record by primary key, or init with the specified attributes if record not found
      *
      * @param int|string $id
-     * @param array|object $data
+     * @param array|object $attributes
      * @return $this
      * @see CategoryModel::findOrInit
      */
-    public static function findOrInit($id = null, $data = [])
+    public static function findOrInit($id = null, $attributes = []): self
     {
     }
 
     /**
-     * Find a record by primary key, or save with the specified data if record not found
+     * Find a record by primary key, or save with the specified attributes if record not found
      *
      * @param int|string $id
-     * @param array $data
+     * @param array $attributes
      * @return $this
      * @see CategoryModel::findOrCreate
      */
-    public static function findOrCreate($id, $data = [])
+    public static function findOrCreate($id, $attributes = []): self
     {
     }
 
     /**
      * @param array $attributes
-     * @param array $data
+     * @param array|object $data
      * @return $this
      * @see CategoryModel::findByOrCreate
      */
-    public static function findByOrCreate($attributes, $data = [])
+    public static function findByOrCreate($attributes, $data = []): self
     {
     }
 
@@ -162,7 +162,7 @@ class CategoryModel
      * @return $this|$this[]
      * @see CategoryModel::findAll
      */
-    public static function findAll($ids)
+    public static function findAll(array $ids): self
     {
     }
 
@@ -173,7 +173,7 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::findBy
      */
-    public static function findBy($column, $operator = null, $value = null)
+    public static function findBy($column, $operator = null, $value = null): ?self
     {
     }
 
@@ -184,7 +184,7 @@ class CategoryModel
      * @return $this|$this[]
      * @see CategoryModel::findAllBy
      */
-    public static function findAllBy($column, $operator = null, $value = null)
+    public static function findAllBy($column, $operator = null, $value = null): self
     {
     }
 
@@ -194,7 +194,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::findOrInitBy
      */
-    public static function findOrInitBy($attributes, $data = [])
+    public static function findOrInitBy(array $attributes, $data = []): self
     {
     }
 
@@ -208,17 +208,17 @@ class CategoryModel
      * @throws \Exception
      * @see CategoryModel::findByOrFail
      */
-    public static function findByOrFail($column, $operator = null, $value = null)
+    public static function findByOrFail($column, $operator = null, $value = null): self
     {
     }
 
     /**
-     * @param array|Req|null $req
+     * @param Req|null $req
      * @return $this
      * @throws \Exception
      * @see CategoryModel::findFromReq
      */
-    public static function findFromReq($req = null)
+    public static function findFromReq(\Wei\Req $req = null): self
     {
     }
 
@@ -228,34 +228,47 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::first
      */
-    public static function first()
+    public static function first(): ?self
     {
     }
 
     /**
-     * @return $this|$this[]|array
+     * @return $this|$this[]
      * @see CategoryModel::all
      */
-    public static function all()
+    public static function all(): self
     {
     }
 
     /**
+     * Coll: Specifies a field to be the key of the fetched array
+     *
      * @param string $column
      * @return $this
      * @see CategoryModel::indexBy
      */
-    public static function indexBy($column)
+    public static function indexBy(string $column): self
     {
     }
 
     /**
-     * Returns the name of fields of current table
+     * Returns the name of columns of current table
      *
      * @return array
      * @see CategoryModel::getColumns
      */
-    public static function getColumns()
+    public static function getColumns(): array
+    {
+    }
+
+    /**
+     * Check if column name exists
+     *
+     * @param string|int|null $name
+     * @return bool
+     * @see CategoryModel::hasColumn
+     */
+    public static function hasColumn($name): bool
     {
     }
 
@@ -268,7 +281,7 @@ class CategoryModel
      * @return array|null
      * @see CategoryModel::fetch
      */
-    public static function fetch($column = null, $operator = null, $value = null)
+    public static function fetch($column = null, $operator = null, $value = null): ?array
     {
     }
 
@@ -281,7 +294,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::fetchAll
      */
-    public static function fetchAll($column = null, $operator = null, $value = null)
+    public static function fetchAll($column = null, $operator = null, $value = null): array
     {
     }
 
@@ -291,7 +304,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::pluck
      */
-    public static function pluck(string $column, string $index = null)
+    public static function pluck(string $column, string $index = null): array
     {
     }
 
@@ -301,7 +314,7 @@ class CategoryModel
      * @return bool
      * @see CategoryModel::chunk
      */
-    public static function chunk(int $count, callable $callback)
+    public static function chunk(int $count, callable $callback): bool
     {
     }
 
@@ -312,7 +325,7 @@ class CategoryModel
      * @return int
      * @see CategoryModel::cnt
      */
-    public static function cnt($column = '*')
+    public static function cnt($column = '*'): int
     {
     }
 
@@ -324,7 +337,7 @@ class CategoryModel
      * @return int
      * @see CategoryModel::update
      */
-    public static function update($set = [], $value = null)
+    public static function update($set = [], $value = null): int
     {
     }
 
@@ -334,10 +347,10 @@ class CategoryModel
      * @param mixed|null $column
      * @param mixed|null $operator
      * @param mixed|null $value
-     * @return mixed
+     * @return int
      * @see CategoryModel::delete
      */
-    public static function delete($column = null, $operator = null, $value = null)
+    public static function delete($column = null, $operator = null, $value = null): int
     {
     }
 
@@ -348,7 +361,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::offset
      */
-    public static function offset($offset)
+    public static function offset($offset): self
     {
     }
 
@@ -359,7 +372,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::limit
      */
-    public static function limit($limit)
+    public static function limit($limit): self
     {
     }
 
@@ -370,7 +383,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::page
      */
-    public static function page($page)
+    public static function page($page): self
     {
     }
 
@@ -391,7 +404,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectDistinct
      */
-    public static function selectDistinct($columns)
+    public static function selectDistinct($columns): self
     {
     }
 
@@ -400,7 +413,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectRaw
      */
-    public static function selectRaw($expression)
+    public static function selectRaw($expression): self
     {
     }
 
@@ -412,7 +425,19 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectExcept
      */
-    public static function selectExcept($columns)
+    public static function selectExcept($columns): self
+    {
+    }
+
+    /**
+     * Specifies an item of the main table that is to be returned in the query result.
+     * Default to all columns of the main table
+     *
+     * @param string $column
+     * @return $this
+     * @see CategoryModel::selectMain
+     */
+    public static function selectMain(string $column = '*'): self
     {
     }
 
@@ -424,7 +449,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::from
      */
-    public static function from($table, $alias = null): self
+    public static function from(string $table, $alias = null): self
     {
     }
 
@@ -442,14 +467,14 @@ class CategoryModel
      * Adds a inner join to the query
      *
      * @param string $table The table name to join
-     * @param string $first
+     * @param string|null $first
      * @param string $operator
-     * @param string $second
+     * @param string|null $second
      * @param string $type
      * @return $this
      * @see CategoryModel::join
      */
-    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER')
+    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
     {
     }
 
@@ -463,7 +488,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::innerJoin
      */
-    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -477,7 +502,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::leftJoin
      */
-    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -491,7 +516,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::rightJoin
      */
-    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -512,17 +537,17 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::where
      */
-    public static function where($column = null, $operator = null, $value = null)
+    public static function where($column = null, $operator = null, $value = null): self
     {
     }
 
     /**
-     * @param string $expression
+     * @param scalar $expression
      * @param mixed $params
      * @return $this
      * @see CategoryModel::whereRaw
      */
-    public static function whereRaw($expression, $params = [])
+    public static function whereRaw($expression, $params = null): self
     {
     }
 
@@ -532,7 +557,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereBetween
      */
-    public static function whereBetween($column, array $params)
+    public static function whereBetween(string $column, array $params): self
     {
     }
 
@@ -542,7 +567,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNotBetween
      */
-    public static function whereNotBetween($column, array $params)
+    public static function whereNotBetween(string $column, array $params): self
     {
     }
 
@@ -552,7 +577,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereIn
      */
-    public static function whereIn($column, array $params)
+    public static function whereIn(string $column, array $params): self
     {
     }
 
@@ -562,7 +587,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNotIn
      */
-    public static function whereNotIn($column, array $params)
+    public static function whereNotIn(string $column, array $params): self
     {
     }
 
@@ -571,16 +596,16 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNull
      */
-    public static function whereNull($column)
+    public static function whereNull(string $column): self
     {
     }
 
     /**
      * @param string $column
      * @return $this
-     * @see CategoryModel::whereNotNULL
+     * @see CategoryModel::whereNotNull
      */
-    public static function whereNotNULL($column)
+    public static function whereNotNull(string $column): self
     {
     }
 
@@ -591,7 +616,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereDate
      */
-    public static function whereDate($column, $opOrValue, $value = null)
+    public static function whereDate(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -602,7 +627,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereMonth
      */
-    public static function whereMonth($column, $opOrValue, $value = null)
+    public static function whereMonth(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -613,7 +638,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereDay
      */
-    public static function whereDay($column, $opOrValue, $value = null)
+    public static function whereDay(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -624,7 +649,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereYear
      */
-    public static function whereYear($column, $opOrValue, $value = null)
+    public static function whereYear(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -635,18 +660,18 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereTime
      */
-    public static function whereTime($column, $opOrValue, $value = null)
+    public static function whereTime(string $column, $opOrValue, $value = null): self
     {
     }
 
     /**
      * @param string $column
-     * @param string $opOrColumn2
-     * @param string|null $column2
+     * @param mixed $opOrColumn2
+     * @param mixed|null $column2
      * @return $this
      * @see CategoryModel::whereColumn
      */
-    public static function whereColumn($column, $opOrColumn2, $column2 = null)
+    public static function whereColumn(string $column, $opOrColumn2, $column2 = null): self
     {
     }
 
@@ -654,23 +679,46 @@ class CategoryModel
      * 搜索字段是否包含某个值
      *
      * @param string $column
-     * @param string $value
+     * @param mixed $value
      * @param string $condition
      * @return $this
      * @see CategoryModel::whereContains
      */
-    public static function whereContains($column, $value, string $condition = 'AND')
+    public static function whereContains(string $column, $value, string $condition = 'AND'): self
     {
     }
 
     /**
-     * @param mixed $column
+     * @param string $column
      * @param mixed $value
      * @param string $condition
      * @return $this
      * @see CategoryModel::whereNotContains
      */
-    public static function whereNotContains($column, $value, string $condition = 'OR')
+    public static function whereNotContains(string $column, $value, string $condition = 'OR'): self
+    {
+    }
+
+    /**
+     * Search whether a column has a value other than the default value
+     *
+     * @param string $column
+     * @param bool $has
+     * @return $this
+     * @see CategoryModel::whereHas
+     */
+    public static function whereHas(string $column, bool $has = true): self
+    {
+    }
+
+    /**
+     * Search whether a column dont have a value other than the default value
+     *
+     * @param string $column
+     * @return $this
+     * @see CategoryModel::whereNotHas
+     */
+    public static function whereNotHas(string $column): self
     {
     }
 
@@ -682,7 +730,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::groupBy
      */
-    public static function groupBy($column)
+    public static function groupBy($column): self
     {
     }
 
@@ -697,7 +745,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::having
      */
-    public static function having($column, $operator, $value = null, $condition = 'AND')
+    public static function having($column, $operator, $value = null, $condition = 'AND'): self
     {
     }
 
@@ -710,7 +758,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::orderBy
      */
-    public static function orderBy($column, $order = 'ASC')
+    public static function orderBy(string $column, $order = 'ASC'): self
     {
     }
 
@@ -721,7 +769,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::desc
      */
-    public static function desc($field)
+    public static function desc(string $field): self
     {
     }
 
@@ -732,7 +780,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::asc
      */
-    public static function asc($field)
+    public static function asc(string $field): self
     {
     }
 
@@ -740,7 +788,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::forUpdate
      */
-    public static function forUpdate()
+    public static function forUpdate(): self
     {
     }
 
@@ -748,7 +796,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::forShare
      */
-    public static function forShare()
+    public static function forShare(): self
     {
     }
 
@@ -757,7 +805,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::lock
      */
-    public static function lock($lock)
+    public static function lock($lock): self
     {
     }
 
@@ -768,7 +816,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::when
      */
-    public static function when($value, $callback, callable $default = null)
+    public static function when($value, callable $callback, callable $default = null): self
     {
     }
 
@@ -779,7 +827,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::unless
      */
-    public static function unless($value, callable $callback, callable $default = null)
+    public static function unless($value, callable $callback, callable $default = null): self
     {
     }
 
@@ -788,7 +836,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::setDbKeyConverter
      */
-    public static function setDbKeyConverter(callable $converter = null)
+    public static function setDbKeyConverter(callable $converter = null): self
     {
     }
 
@@ -797,18 +845,18 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::setPhpKeyConverter
      */
-    public static function setPhpKeyConverter(callable $converter = null)
+    public static function setPhpKeyConverter(callable $converter = null): self
     {
     }
 
     /**
      * Set or remove cache time for the query
      *
-     * @param false|int|null $seconds
+     * @param int|null $seconds
      * @return $this
      * @see CategoryModel::setCacheTime
      */
-    public static function cache($seconds = null)
+    public static function setCacheTime(?int $seconds): self
     {
     }
 
@@ -817,18 +865,33 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::unscoped
      */
-    public static function unscoped($scopes = [])
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Check if the model method defines the "Relation" attribute (or the "@Relation" tag in doc comment)
+     *
+     * This method only checks whether the specified method has the "Relation" attribute,
+     * and does not check the actual logic.
+     * It is provided for external use to avoid directly calling `$this->$relation()` to cause attacks.
+     *
+     * @param string $method
+     * @return bool
+     * @see CategoryModel::isRelation
+     */
+    public static function isRelation(string $method): bool
     {
     }
 
     /**
      * Really remove the record from database
      *
-     * @param mixed $conditions
+     * @param int|string $id
      * @return $this
      * @see CategoryModel::reallyDestroy
      */
-    public static function reallyDestroy($conditions = false)
+    public static function reallyDestroy($id = false): self
     {
     }
 
@@ -838,7 +901,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::withoutDeleted
      */
-    public static function withoutDeleted()
+    public static function withoutDeleted(): self
     {
     }
 
@@ -848,7 +911,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::onlyDeleted
      */
-    public static function onlyDeleted()
+    public static function onlyDeleted(): self
     {
     }
 
@@ -858,7 +921,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::withDeleted
      */
-    public static function withDeleted()
+    public static function withDeleted(): self
     {
     }
 
@@ -867,7 +930,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::like
      */
-    public static function like($columns)
+    public static function like($columns): self
     {
     }
 }
@@ -882,6 +945,17 @@ class Category
 class CategoryModel
 {
     /**
+     * Set each attribute value, without checking whether the column is fillable, and save the model
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see CategoryModel::saveAttributes
+     */
+    public function saveAttributes(iterable $attributes = []): self
+    {
+    }
+
+    /**
      * Returns the record data as array
      *
      * @param array|callable $returnFields A indexed array specified the fields to return
@@ -889,18 +963,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::toArray
      */
-    public function toArray($returnFields = [], callable $prepend = null)
-    {
-    }
-
-    /**
-     * 不经过fillable检查,设置数据并保存
-     *
-     * @param array $data
-     * @return $this
-     * @see CategoryModel::saveAttributes
-     */
-    public function saveData($data = [])
+    public function toArray($returnFields = [], callable $prepend = null): array
     {
     }
 
@@ -911,7 +974,7 @@ class CategoryModel
      * @return Ret
      * @see CategoryModel::toRet
      */
-    public function toRet(array $merge = [])
+    public function toRet(array $merge = []): \Wei\Ret
     {
     }
 
@@ -921,29 +984,29 @@ class CategoryModel
      * @return string
      * @see CategoryModel::getTable
      */
-    public function getTable()
+    public function getTable(): string
     {
     }
 
     /**
      * Import a PHP array in this record
      *
-     * @param array|\ArrayAccess $data
+     * @param iterable $array
      * @return $this
      * @see CategoryModel::fromArray
      */
-    public function fromArray($data)
+    public function fromArray(iterable $array): self
     {
     }
 
     /**
      * Save the record or data to database
      *
-     * @param array $data
+     * @param iterable $attributes
      * @return $this
      * @see CategoryModel::save
      */
-    public function save($data = [])
+    public function save(iterable $attributes = []): self
     {
     }
 
@@ -954,20 +1017,20 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::destroy
      */
-    public function destroy($id = null)
+    public function destroy($id = null): self
     {
     }
 
     /**
      * Set the record field value
      *
-     * @param string $name
+     * @param string|int $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
      * @see CategoryModel::set
      */
-    public function set($name, $value = null, $throwException = true)
+    public function set($name, $value, bool $throwException = true)
     {
     }
 
@@ -978,7 +1041,7 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::find
      */
-    public function find($id)
+    public function find($id): ?self
     {
     }
 
@@ -990,41 +1053,41 @@ class CategoryModel
      * @throws \Exception
      * @see CategoryModel::findOrFail
      */
-    public function findOrFail($id)
+    public function findOrFail($id): self
     {
     }
 
     /**
-     * Find a record by primary key, or init with the specified data if record not found
+     * Find a record by primary key, or init with the specified attributes if record not found
      *
      * @param int|string $id
-     * @param array|object $data
+     * @param array|object $attributes
      * @return $this
      * @see CategoryModel::findOrInit
      */
-    public function findOrInit($id = null, $data = [])
+    public function findOrInit($id = null, $attributes = []): self
     {
     }
 
     /**
-     * Find a record by primary key, or save with the specified data if record not found
+     * Find a record by primary key, or save with the specified attributes if record not found
      *
      * @param int|string $id
-     * @param array $data
+     * @param array $attributes
      * @return $this
      * @see CategoryModel::findOrCreate
      */
-    public function findOrCreate($id, $data = [])
+    public function findOrCreate($id, $attributes = []): self
     {
     }
 
     /**
      * @param array $attributes
-     * @param array $data
+     * @param array|object $data
      * @return $this
      * @see CategoryModel::findByOrCreate
      */
-    public function findByOrCreate($attributes, $data = [])
+    public function findByOrCreate($attributes, $data = []): self
     {
     }
 
@@ -1035,7 +1098,7 @@ class CategoryModel
      * @return $this|$this[]
      * @see CategoryModel::findAll
      */
-    public function findAll($ids)
+    public function findAll(array $ids): self
     {
     }
 
@@ -1046,7 +1109,7 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::findBy
      */
-    public function findBy($column, $operator = null, $value = null)
+    public function findBy($column, $operator = null, $value = null): ?self
     {
     }
 
@@ -1057,7 +1120,7 @@ class CategoryModel
      * @return $this|$this[]
      * @see CategoryModel::findAllBy
      */
-    public function findAllBy($column, $operator = null, $value = null)
+    public function findAllBy($column, $operator = null, $value = null): self
     {
     }
 
@@ -1067,7 +1130,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::findOrInitBy
      */
-    public function findOrInitBy($attributes, $data = [])
+    public function findOrInitBy(array $attributes, $data = []): self
     {
     }
 
@@ -1081,17 +1144,17 @@ class CategoryModel
      * @throws \Exception
      * @see CategoryModel::findByOrFail
      */
-    public function findByOrFail($column, $operator = null, $value = null)
+    public function findByOrFail($column, $operator = null, $value = null): self
     {
     }
 
     /**
-     * @param array|Req|null $req
+     * @param Req|null $req
      * @return $this
      * @throws \Exception
      * @see CategoryModel::findFromReq
      */
-    public function findFromReq($req = null)
+    public function findFromReq(\Wei\Req $req = null): self
     {
     }
 
@@ -1101,34 +1164,47 @@ class CategoryModel
      * @return $this|null
      * @see CategoryModel::first
      */
-    public function first()
+    public function first(): ?self
     {
     }
 
     /**
-     * @return $this|$this[]|array
+     * @return $this|$this[]
      * @see CategoryModel::all
      */
-    public function all()
+    public function all(): self
     {
     }
 
     /**
+     * Coll: Specifies a field to be the key of the fetched array
+     *
      * @param string $column
      * @return $this
      * @see CategoryModel::indexBy
      */
-    public function indexBy($column)
+    public function indexBy(string $column): self
     {
     }
 
     /**
-     * Returns the name of fields of current table
+     * Returns the name of columns of current table
      *
      * @return array
      * @see CategoryModel::getColumns
      */
-    public function getColumns()
+    public function getColumns(): array
+    {
+    }
+
+    /**
+     * Check if column name exists
+     *
+     * @param string|int|null $name
+     * @return bool
+     * @see CategoryModel::hasColumn
+     */
+    public function hasColumn($name): bool
     {
     }
 
@@ -1141,7 +1217,7 @@ class CategoryModel
      * @return array|null
      * @see CategoryModel::fetch
      */
-    public function fetch($column = null, $operator = null, $value = null)
+    public function fetch($column = null, $operator = null, $value = null): ?array
     {
     }
 
@@ -1154,7 +1230,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::fetchAll
      */
-    public function fetchAll($column = null, $operator = null, $value = null)
+    public function fetchAll($column = null, $operator = null, $value = null): array
     {
     }
 
@@ -1164,7 +1240,7 @@ class CategoryModel
      * @return array
      * @see CategoryModel::pluck
      */
-    public function pluck(string $column, string $index = null)
+    public function pluck(string $column, string $index = null): array
     {
     }
 
@@ -1174,7 +1250,7 @@ class CategoryModel
      * @return bool
      * @see CategoryModel::chunk
      */
-    public function chunk(int $count, callable $callback)
+    public function chunk(int $count, callable $callback): bool
     {
     }
 
@@ -1185,7 +1261,7 @@ class CategoryModel
      * @return int
      * @see CategoryModel::cnt
      */
-    public function cnt($column = '*')
+    public function cnt($column = '*'): int
     {
     }
 
@@ -1197,7 +1273,7 @@ class CategoryModel
      * @return int
      * @see CategoryModel::update
      */
-    public function update($set = [], $value = null)
+    public function update($set = [], $value = null): int
     {
     }
 
@@ -1207,10 +1283,10 @@ class CategoryModel
      * @param mixed|null $column
      * @param mixed|null $operator
      * @param mixed|null $value
-     * @return mixed
+     * @return int
      * @see CategoryModel::delete
      */
-    public function delete($column = null, $operator = null, $value = null)
+    public function delete($column = null, $operator = null, $value = null): int
     {
     }
 
@@ -1221,7 +1297,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::offset
      */
-    public function offset($offset)
+    public function offset($offset): self
     {
     }
 
@@ -1232,7 +1308,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::limit
      */
-    public function limit($limit)
+    public function limit($limit): self
     {
     }
 
@@ -1243,7 +1319,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::page
      */
-    public function page($page)
+    public function page($page): self
     {
     }
 
@@ -1264,7 +1340,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectDistinct
      */
-    public function selectDistinct($columns)
+    public function selectDistinct($columns): self
     {
     }
 
@@ -1273,7 +1349,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectRaw
      */
-    public function selectRaw($expression)
+    public function selectRaw($expression): self
     {
     }
 
@@ -1285,7 +1361,19 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::selectExcept
      */
-    public function selectExcept($columns)
+    public function selectExcept($columns): self
+    {
+    }
+
+    /**
+     * Specifies an item of the main table that is to be returned in the query result.
+     * Default to all columns of the main table
+     *
+     * @param string $column
+     * @return $this
+     * @see CategoryModel::selectMain
+     */
+    public function selectMain(string $column = '*'): self
     {
     }
 
@@ -1297,7 +1385,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::from
      */
-    public function from($table, $alias = null): self
+    public function from(string $table, $alias = null): self
     {
     }
 
@@ -1315,14 +1403,14 @@ class CategoryModel
      * Adds a inner join to the query
      *
      * @param string $table The table name to join
-     * @param string $first
+     * @param string|null $first
      * @param string $operator
-     * @param string $second
+     * @param string|null $second
      * @param string $type
      * @return $this
      * @see CategoryModel::join
      */
-    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER')
+    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
     {
     }
 
@@ -1336,7 +1424,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::innerJoin
      */
-    public function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -1350,7 +1438,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::leftJoin
      */
-    public function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -1364,7 +1452,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::rightJoin
      */
-    public function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null)
+    public function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
     {
     }
 
@@ -1385,17 +1473,17 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::where
      */
-    public function where($column = null, $operator = null, $value = null)
+    public function where($column = null, $operator = null, $value = null): self
     {
     }
 
     /**
-     * @param string $expression
+     * @param scalar $expression
      * @param mixed $params
      * @return $this
      * @see CategoryModel::whereRaw
      */
-    public function whereRaw($expression, $params = [])
+    public function whereRaw($expression, $params = null): self
     {
     }
 
@@ -1405,7 +1493,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereBetween
      */
-    public function whereBetween($column, array $params)
+    public function whereBetween(string $column, array $params): self
     {
     }
 
@@ -1415,7 +1503,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNotBetween
      */
-    public function whereNotBetween($column, array $params)
+    public function whereNotBetween(string $column, array $params): self
     {
     }
 
@@ -1425,7 +1513,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereIn
      */
-    public function whereIn($column, array $params)
+    public function whereIn(string $column, array $params): self
     {
     }
 
@@ -1435,7 +1523,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNotIn
      */
-    public function whereNotIn($column, array $params)
+    public function whereNotIn(string $column, array $params): self
     {
     }
 
@@ -1444,16 +1532,16 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereNull
      */
-    public function whereNull($column)
+    public function whereNull(string $column): self
     {
     }
 
     /**
      * @param string $column
      * @return $this
-     * @see CategoryModel::whereNotNULL
+     * @see CategoryModel::whereNotNull
      */
-    public function whereNotNULL($column)
+    public function whereNotNull(string $column): self
     {
     }
 
@@ -1464,7 +1552,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereDate
      */
-    public function whereDate($column, $opOrValue, $value = null)
+    public function whereDate(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -1475,7 +1563,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereMonth
      */
-    public function whereMonth($column, $opOrValue, $value = null)
+    public function whereMonth(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -1486,7 +1574,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereDay
      */
-    public function whereDay($column, $opOrValue, $value = null)
+    public function whereDay(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -1497,7 +1585,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereYear
      */
-    public function whereYear($column, $opOrValue, $value = null)
+    public function whereYear(string $column, $opOrValue, $value = null): self
     {
     }
 
@@ -1508,18 +1596,18 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::whereTime
      */
-    public function whereTime($column, $opOrValue, $value = null)
+    public function whereTime(string $column, $opOrValue, $value = null): self
     {
     }
 
     /**
      * @param string $column
-     * @param string $opOrColumn2
-     * @param string|null $column2
+     * @param mixed $opOrColumn2
+     * @param mixed|null $column2
      * @return $this
      * @see CategoryModel::whereColumn
      */
-    public function whereColumn($column, $opOrColumn2, $column2 = null)
+    public function whereColumn(string $column, $opOrColumn2, $column2 = null): self
     {
     }
 
@@ -1527,23 +1615,46 @@ class CategoryModel
      * 搜索字段是否包含某个值
      *
      * @param string $column
-     * @param string $value
+     * @param mixed $value
      * @param string $condition
      * @return $this
      * @see CategoryModel::whereContains
      */
-    public function whereContains($column, $value, string $condition = 'AND')
+    public function whereContains(string $column, $value, string $condition = 'AND'): self
     {
     }
 
     /**
-     * @param mixed $column
+     * @param string $column
      * @param mixed $value
      * @param string $condition
      * @return $this
      * @see CategoryModel::whereNotContains
      */
-    public function whereNotContains($column, $value, string $condition = 'OR')
+    public function whereNotContains(string $column, $value, string $condition = 'OR'): self
+    {
+    }
+
+    /**
+     * Search whether a column has a value other than the default value
+     *
+     * @param string $column
+     * @param bool $has
+     * @return $this
+     * @see CategoryModel::whereHas
+     */
+    public function whereHas(string $column, bool $has = true): self
+    {
+    }
+
+    /**
+     * Search whether a column dont have a value other than the default value
+     *
+     * @param string $column
+     * @return $this
+     * @see CategoryModel::whereNotHas
+     */
+    public function whereNotHas(string $column): self
     {
     }
 
@@ -1555,7 +1666,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::groupBy
      */
-    public function groupBy($column)
+    public function groupBy($column): self
     {
     }
 
@@ -1570,7 +1681,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::having
      */
-    public function having($column, $operator, $value = null, $condition = 'AND')
+    public function having($column, $operator, $value = null, $condition = 'AND'): self
     {
     }
 
@@ -1583,7 +1694,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::orderBy
      */
-    public function orderBy($column, $order = 'ASC')
+    public function orderBy(string $column, $order = 'ASC'): self
     {
     }
 
@@ -1594,7 +1705,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::desc
      */
-    public function desc($field)
+    public function desc(string $field): self
     {
     }
 
@@ -1605,7 +1716,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::asc
      */
-    public function asc($field)
+    public function asc(string $field): self
     {
     }
 
@@ -1613,7 +1724,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::forUpdate
      */
-    public function forUpdate()
+    public function forUpdate(): self
     {
     }
 
@@ -1621,7 +1732,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::forShare
      */
-    public function forShare()
+    public function forShare(): self
     {
     }
 
@@ -1630,7 +1741,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::lock
      */
-    public function lock($lock)
+    public function lock($lock): self
     {
     }
 
@@ -1641,7 +1752,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::when
      */
-    public function when($value, $callback, callable $default = null)
+    public function when($value, callable $callback, callable $default = null): self
     {
     }
 
@@ -1652,7 +1763,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::unless
      */
-    public function unless($value, callable $callback, callable $default = null)
+    public function unless($value, callable $callback, callable $default = null): self
     {
     }
 
@@ -1661,7 +1772,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::setDbKeyConverter
      */
-    public function setDbKeyConverter(callable $converter = null)
+    public function setDbKeyConverter(callable $converter = null): self
     {
     }
 
@@ -1670,18 +1781,18 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::setPhpKeyConverter
      */
-    public function setPhpKeyConverter(callable $converter = null)
+    public function setPhpKeyConverter(callable $converter = null): self
     {
     }
 
     /**
      * Set or remove cache time for the query
      *
-     * @param false|int|null $seconds
+     * @param int|null $seconds
      * @return $this
      * @see CategoryModel::setCacheTime
      */
-    public function cache($seconds = null)
+    public function setCacheTime(?int $seconds): self
     {
     }
 
@@ -1690,18 +1801,33 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::unscoped
      */
-    public function unscoped($scopes = [])
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Check if the model method defines the "Relation" attribute (or the "@Relation" tag in doc comment)
+     *
+     * This method only checks whether the specified method has the "Relation" attribute,
+     * and does not check the actual logic.
+     * It is provided for external use to avoid directly calling `$this->$relation()` to cause attacks.
+     *
+     * @param string $method
+     * @return bool
+     * @see CategoryModel::isRelation
+     */
+    public function isRelation(string $method): bool
     {
     }
 
     /**
      * Really remove the record from database
      *
-     * @param mixed $conditions
+     * @param int|string $id
      * @return $this
      * @see CategoryModel::reallyDestroy
      */
-    public function reallyDestroy($conditions = false)
+    public function reallyDestroy($id = false): self
     {
     }
 
@@ -1711,7 +1837,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::withoutDeleted
      */
-    public function withoutDeleted()
+    public function withoutDeleted(): self
     {
     }
 
@@ -1721,7 +1847,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::onlyDeleted
      */
-    public function onlyDeleted()
+    public function onlyDeleted(): self
     {
     }
 
@@ -1731,7 +1857,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::withDeleted
      */
-    public function withDeleted()
+    public function withDeleted(): self
     {
     }
 
@@ -1740,7 +1866,7 @@ class CategoryModel
      * @return $this
      * @see CategoryModel::like
      */
-    public function like($columns)
+    public function like($columns): self
     {
     }
 }

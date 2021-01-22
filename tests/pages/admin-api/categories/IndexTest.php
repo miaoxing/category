@@ -27,13 +27,11 @@ class IndexTest extends BaseTestCase
 
         $ret = Tester::request(['id' => $category->id])->getAdminApi('categories');
 
-        $category->reload();
+        $categories = CategoryModel::findAll([$category->id])
+            ->load('children')
+            ->toArray();
 
-        // FIXME
-        $category->id = (int) $category->id;
-        $category->children[0]->deletedAt = (string) $category->children[0]->deletedAt;
-
-        $this->assertSame($category->toArray(), $ret['data'][0], '返回列表数据包含下级');
+        $this->assertSame($categories, $ret['data'], '返回列表数据包含下级');
     }
 
     public function testPost()

@@ -72,7 +72,7 @@ class IdTest extends BaseTestCase
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
             'parentId' => $category->id,
         ]);
-        $this->assertRetErr($ret, null, '不能使用自己作为父级分类');
+        $this->assertRetErr($ret, '不能使用自己作为父级分类');
     }
 
     public function testPatchChangeSubCategoryToRootWillUpdateLevel()
@@ -103,7 +103,7 @@ class IdTest extends BaseTestCase
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
             'parentId' => $subCategory->id,
         ]);
-        $this->assertRetErr($ret, null, '当前只支持 2 级分类，该分类已有子分类，不能成为其他分类的子分类');
+        $this->assertRetErr($ret, '当前只支持 2 级分类，该分类已有子分类，不能成为其他分类的子分类');
     }
 
     public function testDelete()

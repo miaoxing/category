@@ -16,6 +16,7 @@ use Miaoxing\Plugin\Service\Model;
  */
 class CategoryModel extends BaseModel
 {
+    use ModelTrait;
     use CategoryTrait;
     use SoftDeleteTrait;
     use ReqQueryTrait;
@@ -27,14 +28,14 @@ class CategoryModel extends BaseModel
         'linkTo' => [],
     ];
 
-    public function getCasts(): array
-    {
-        return array_merge($this->casts, [
-            'linkTo' => 'json',
-        ]);
-    }
+    protected $columns = [
+        'linkTo' => [
+            'cast' => 'json',
+            'default' => [],
+        ],
+    ];
 
-    public function getGuarded()
+    public function getGuarded(): array
     {
         return array_merge($this->guarded, [
             'level',
@@ -43,8 +44,6 @@ class CategoryModel extends BaseModel
 
     public function afterDestroy()
     {
-        parent::afterDestroy();
-
         $this->children->destroy();
     }
 
@@ -140,8 +139,7 @@ class CategoryModel extends BaseModel
      */
     public function getTree($categories = [])
     {
-        /** @var $category CategoryModel */
-        foreach ($this as $category) {
+        foreach ($this->attributes as $category) {
             $categories[] = $category;
             $categories = $category->children->getTree($categories);
         }
