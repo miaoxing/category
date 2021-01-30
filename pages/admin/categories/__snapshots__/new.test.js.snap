@@ -14,7 +14,7 @@ exports[`admin/categories form 1`] = `
         "loading": true,
         "method": "get",
         "params": Object {
-          "rows": 1000,
+          "limit": 500,
         },
         "url": "/admin-api/categories",
       },
@@ -53,7 +53,7 @@ exports[`admin/categories form 2`] = `
         "loading": true,
         "method": "get",
         "params": Object {
-          "rows": 1000,
+          "limit": 500,
         },
         "url": "/admin-api/categories",
       },
@@ -63,7 +63,6 @@ exports[`admin/categories form 2`] = `
         "data": Object {
           "description": undefined,
           "id": undefined,
-          "listTpl": undefined,
           "name": "测试分类",
           "parentId": 0,
           "sort": 50,
