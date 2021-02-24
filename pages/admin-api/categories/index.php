@@ -12,9 +12,8 @@ return new class extends BaseController {
     {
         return IndexAction
             ::beforeFind(function (CategoryModel $models) {
-                $models->reqQuery()
-                    ->where('level', 1)
-                    ->sort('sort');
+                $models->where('level', 1)
+                    ->setDefaultSortColumn(['sort', 'id']);
             })
             ->afterFind(function (CategoryModel $models) {
                 $models->load('children');
