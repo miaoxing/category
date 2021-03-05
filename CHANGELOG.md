@@ -1,3 +1,23 @@
+# [0.2.0](https://github.com/miaoxing/category/compare/v0.1.1...v0.2.0) (2021-03-05)
+
+
+* refactor(Model)!: Model 列名都改为驼峰格式，与数据库交互转换为下划线格式 ([724502d](https://github.com/miaoxing/category/commit/724502dc9a218f9a42fafe6548d796ad844d7b0b))
+
+
+### BREAKING CHANGES
+
+* Model 列名都改为驼峰格式，与数据库交互转换为下划线格式
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/test:** upgrade from 0.1.0 to 0.1.1
+* **@miaoxing/app:** upgrade from 0.2.4 to 0.2.5
+* **@miaoxing/link-to:** upgrade from 0.1.4 to 0.1.5
+
 ## [0.1.1](https://github.com/miaoxing/category/compare/v0.1.0...v0.1.1) (2020-09-27)
 
 
