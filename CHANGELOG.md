@@ -1,3 +1,15 @@
+## [0.2.5](https://github.com/miaoxing/category/compare/v0.2.4...v0.2.5) (2021-03-10)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from 6.3.1 to 6.3.2
+* **@miaoxing/app:** upgrade from 0.2.9 to 0.2.10
+* **@miaoxing/link-to:** upgrade from 0.1.9 to 0.1.10
+
 ## [0.2.4](https://github.com/miaoxing/category/compare/v0.2.3...v0.2.4) (2021-03-09)
 
 
