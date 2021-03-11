@@ -13,8 +13,8 @@ describe('admin/categories', () => {
     setUrl('admin/categories');
     app.page = {
       collection: 'admin/categories',
-      index: true
-    }
+      index: true,
+    };
   });
 
   afterEach(() => {
@@ -41,9 +41,9 @@ describe('admin/categories', () => {
                 parentId: 1,
                 sort: 50,
                 name: '子分类',
-              }
-            ]
-          }
+              },
+            ],
+          },
         ],
       }));
 

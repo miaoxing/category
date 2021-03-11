@@ -18,7 +18,7 @@ export default () => {
         <Table
           tableApi={table}
           expandedRowKeys={expandedRowKeys}
-          expandIcon={({expanded, onExpand, record}) => (record.children ? '' : '└ ')}
+          expandIcon={({record}) => (record.children ? '' : '└ ')}
           postData={(data) => {
             setExpandedRowKeys(data.map(record => record.id));
             return data;
@@ -35,7 +35,7 @@ export default () => {
             {
               title: '顺序',
               dataIndex: 'sort',
-              sorter: true
+              sorter: true,
             },
             {
               title: '操作',

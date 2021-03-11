@@ -43,7 +43,7 @@ describe('admin/categories', () => {
         data: [{
           id: 1,
           name: '测试分类',
-        }]
+        }],
       }))
       // 提交
       .mockImplementationOnce(() => promise3.resolve({
