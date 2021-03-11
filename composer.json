@@ -32,5 +32,8 @@
         "type:miaoxing-plugin"
       ]
     }
+  },
+  "require-dev": {
+    "miaoxing/dev": "^6.3"
   }
 }

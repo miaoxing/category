@@ -4,11 +4,9 @@ namespace Miaoxing\Category\Service;
 
 use Miaoxing\Category\Metadata\CategoryTrait;
 use Miaoxing\Plugin\BaseModel;
-use Miaoxing\Plugin\Model\GetSetTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
-use Miaoxing\Plugin\Service\Model;
 
 /**
  * @property CategoryModel $parent
@@ -16,10 +14,10 @@ use Miaoxing\Plugin\Service\Model;
  */
 class CategoryModel extends BaseModel
 {
-    use ModelTrait;
     use CategoryTrait;
-    use SoftDeleteTrait;
+    use ModelTrait;
     use ReqQueryTrait;
+    use SoftDeleteTrait;
 
     protected $attributes = [
         'parentId' => 0,
@@ -70,16 +68,16 @@ class CategoryModel extends BaseModel
     public function createLinkTo()
     {
         switch (true) {
-            case $this['type'] == 'mall':
+            case 'mall' == $this['type']:
                 return ['type' => 'mall', 'mall' => 'products?categoryId=' . $this['id']];
 
-            case $this['type'] == 'photo':
+            case 'photo' == $this['type']:
                 return ['type' => 'photo', 'photo' => 'album?categoryId=' . $this['id']];
 
-            case $this['type'] == 'video':
+            case 'video' == $this['type']:
                 return ['type' => 'video', 'video' => 'video?categoryId=' . $this['id']];
 
-            case $this['type'] == 'article':
+            case 'article' == $this['type']:
             default:
                 return ['type' => 'site', 'site' => 'article?categoryId=' . $this['id']];
         }
@@ -117,6 +115,7 @@ class CategoryModel extends BaseModel
 
     /**
      * Record: 获取某级父栏目
+     * @param mixed $level
      */
     public function getParentByLevel($level)
     {
