@@ -25,7 +25,7 @@ class IndexTest extends BaseTestCase
             'description' => '子分类描述',
         ]);
 
-        $ret = Tester::request(['id' => $category->id])->getAdminApi('categories');
+        $ret = Tester::request(['search' => ['id' => $category->id]])->getAdminApi('categories');
 
         $categories = CategoryModel::findAll([$category->id])
             ->load('children')
