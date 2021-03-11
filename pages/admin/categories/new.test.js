@@ -1,3 +1,6 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 import Page from './new';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
