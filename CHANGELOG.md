@@ -1,3 +1,26 @@
+## [0.2.11](https://github.com/miaoxing/category/compare/v0.2.10...v0.2.11) (2021-04-27)
+
+
+### Features
+
+* 增加创建页面测试数据的 Seeder ([9645064](https://github.com/miaoxing/category/commit/964506491ad47b9c757cf8b725245c54613a3a78))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.2.5` to `0.2.6`
+* **@mxjs/a-clink:** upgrade from `0.1.5` to `0.1.6`
+* **@mxjs/a-table:** upgrade from `0.3.8` to `0.3.9`
+* **@mxjs/a-form:** upgrade from `0.2.12` to `0.2.13`
+* **@mxjs/actions:** upgrade from `0.1.0` to `0.1.1`
+* **@miaoxing/dev:** upgrade from `6.3.4` to `6.4.0`
+* **@mxjs/test:** upgrade from `0.1.5` to `0.1.6`
+* **@miaoxing/app:** upgrade from `0.2.13` to `0.3.0`
+* **@miaoxing/link-to:** upgrade from `0.1.13` to `0.1.14`
+
 ## [0.2.10](https://github.com/miaoxing/category/compare/v0.2.9...v0.2.10) (2021-03-22)
 
 
