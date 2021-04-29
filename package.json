@@ -26,5 +26,9 @@
     "typescript": "^3.8.3",
     "core-js": "^3.6.5",
     "regenerator-runtime": "^0.13.5"
+  },
+  "ciDependencies": {
+    "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
+    "@miaoxing/dev": "miaoxing/dev"
   }
 }
