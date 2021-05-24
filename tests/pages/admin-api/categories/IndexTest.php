@@ -18,9 +18,10 @@ class IndexTest extends BaseTestCase
             'sort' => 30,
             'description' => '测试描述',
         ]);
-        CategoryModel::save([
+        CategoryModel::saveAttributes([
             'parentId' => $category->id,
             'name' => '子分类',
+            'level' => 2,
             'sort' => 60,
             'description' => '子分类描述',
         ]);
@@ -60,9 +61,12 @@ class IndexTest extends BaseTestCase
     {
         User::loginById(1);
 
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
 
         $ret = Tester::postAdminApi('categories', [
+            'name' => '测试子分类',
             'parentId' => $category->id,
         ]);
         $this->assertRetSuc($ret);

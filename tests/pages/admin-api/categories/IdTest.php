@@ -47,10 +47,12 @@ class IdTest extends BaseTestCase
 
     public function testPatch()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试',
+        ]);
 
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
-            'name' => '测试',
+            'name' => '测试子分类',
             'description' => '描述',
             'sort' => 60,
         ]);
@@ -60,14 +62,16 @@ class IdTest extends BaseTestCase
 
         $this->assertSame($category->id, $newCategory->id);
         $this->assertNotEquals($category->name, $newCategory->name);
-        $this->assertSame('测试', $newCategory->name);
+        $this->assertSame('测试子分类', $newCategory->name);
         $this->assertSame(60, $newCategory->sort);
         $this->assertSame('描述', $newCategory->description);
     }
 
     public function testPatchSelfAsParent()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
 
         $ret = Tester::patchAdminApi('categories/' . $category->id, [
             'parentId' => $category->id,
@@ -77,8 +81,11 @@ class IdTest extends BaseTestCase
 
     public function testPatchChangeSubCategoryToRootWillUpdateLevel()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
         $subCategory = CategoryModel::saveAttributes([
+            'name' => '测试子分类',
             'parentId' => $category->id,
             'level' => 2,
         ]);
@@ -94,8 +101,11 @@ class IdTest extends BaseTestCase
 
     public function testPatchCantChangeRootCategoryToSubIfHasChildren()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
         $subCategory = CategoryModel::saveAttributes([
+            'name' => '测试子分类',
             'parentId' => $category->id,
             'level' => 2,
         ]);
@@ -108,7 +118,9 @@ class IdTest extends BaseTestCase
 
     public function testDelete()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
 
         $ret = Tester::deleteAdminApi('categories/' . $category->id);
         $this->assertRetSuc($ret);
@@ -119,9 +131,13 @@ class IdTest extends BaseTestCase
 
     public function testDeleteWithChildren()
     {
-        $category = CategoryModel::save();
+        $category = CategoryModel::save([
+            'name' => '测试分类',
+        ]);
         $subCategory = CategoryModel::save([
+            'name' => '测试子分类',
             'parentId' => $category->id,
+            'level' => 2,
         ]);
 
         $ret = Tester::deleteAdminApi('categories/' . $category->id);
