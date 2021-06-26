@@ -3,7 +3,7 @@
 namespace Miaoxing\Category\Metadata;
 
 /**
- * @property int $id
+ * @property int|null $id
  * @property int $appId
  * @property int $parentId
  * @property int $level 分类的层级
