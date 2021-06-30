@@ -11,7 +11,7 @@ export default () => {
   const [parents, setParents] = useState([]);
 
   useEffect(() => {
-    api.getMaxCurColl({loading: true}).then(ret => {
+    api.getMaxCurColl({loading: true}).then(({ret}) => {
       setParents(ret.data);
     });
   }, []);
