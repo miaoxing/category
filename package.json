@@ -29,7 +29,10 @@
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
+    "@mxjs/a-page": "miaoxing/mxjs-a-page",
+    "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
+    "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
-    "@mxjs/a-table": "miaoxing/mxjs-a-table"
+    "@mxjs/actions": "miaoxing/mxjs-actions"
   }
 }
