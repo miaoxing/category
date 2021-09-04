@@ -6,6 +6,7 @@ use Miaoxing\Category\Metadata\CategoryTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
+use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 
 /**
@@ -17,6 +18,7 @@ class CategoryModel extends BaseModel
     use CategoryTrait;
     use ModelTrait;
     use ReqQueryTrait;
+    use SnowflakeTrait;
     use SoftDeleteTrait;
 
     protected $attributes = [
