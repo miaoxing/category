@@ -1,3 +1,43 @@
+# [0.3.0](https://github.com/miaoxing/category/compare/v0.2.14...v0.3.0) (2021-10-28)
+
+
+### Code Refactoring
+
+* 调整错误码为 001 开始 ([0b9f550](https://github.com/miaoxing/category/commit/0b9f55051ed64632505ea505e38d3e90173b1c2e))
+* **Model:** 模型的关联方法加上返回值 ([cff4950](https://github.com/miaoxing/category/commit/cff4950a15eb647520517aeedf7d3e0a945777f9))
+
+
+### Features
+
+* 数据表主键 由 `int` 改为 `bigint` ([5e5a602](https://github.com/miaoxing/category/commit/5e5a602a3890a63c2f65fe5eaa08bbe58a12b811))
+* 更新 `react` 到 17 ([9c3a035](https://github.com/miaoxing/category/commit/9c3a035a1ed51069f3d4f32dffe44a3af614c520))
+* 模型通过 `SnowflakeTrait` 生成 id ([9c92fd1](https://github.com/miaoxing/category/commit/9c92fd1161461635c030811eff8db6d0daa1bbfc))
+
+
+### BREAKING CHANGES
+
+* 数据表主键 由 `int` 改为 `bigint`
+* 调整错误码为 001 开始
+* 更新 `react` 到 17
+* **Model:** 模型的关联方法加上返回值
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.2.8` to `0.3.0`
+* **@mxjs/a-clink:** upgrade from `0.1.8` to `0.2.0`
+* **@mxjs/a-table:** upgrade from `0.3.11` to `0.4.0`
+* **@mxjs/a-form:** upgrade from `0.2.15` to `0.3.0`
+* **@mxjs/api:** upgrade from `0.1.3` to `0.1.4`
+* **@mxjs/actions:** upgrade from `0.1.3` to `0.2.0`
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+* **@mxjs/test:** upgrade from `0.1.8` to `0.2.0`
+* **@miaoxing/app:** upgrade from `0.3.3` to `0.4.0`
+* **@miaoxing/link-to:** upgrade from `0.1.17` to `0.1.18`
+
 ## [0.2.14](https://github.com/miaoxing/category/compare/v0.2.13...v0.2.14) (2021-05-21)
 
 
