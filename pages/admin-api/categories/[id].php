@@ -3,9 +3,8 @@
 use Miaoxing\Category\Service\CategoryModel;
 use Miaoxing\Plugin\BaseController;
 use Miaoxing\Services\Page\ItemTrait;
-use Miaoxing\Services\Service\DestroyAction;
 
-return new class extends BaseController {
+return new class () extends BaseController {
     use ItemTrait;
 
     public function patch($req)
