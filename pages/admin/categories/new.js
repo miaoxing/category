@@ -6,7 +6,7 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction, Select} from '@mxjs/a-form';
 import api from '@mxjs/api';
-import {Input} from 'antd';
+import {Input, InputNumber} from 'antd';
 
 export default () => {
   const [parents, setParents] = useState([]);
@@ -31,7 +31,9 @@ export default () => {
         <FormItem label="简介" name="description">
           <Input.TextArea maxLength={255} showCount/>
         </FormItem>
-        <FormItem label="顺序" name="sort" type="number" extra="大的显示在前面，按从大到小排列。"/>
+        <FormItem label="顺序" name="sort" extra="大的显示在前面，按从大到小排列。">
+          <InputNumber precision={0}/>
+        </FormItem>
         <FormItem name="id" type="hidden"/>
         <FormAction/>
       </Form>
