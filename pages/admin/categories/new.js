@@ -6,8 +6,8 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormItem, FormAction, Select} from '@mxjs/a-form';
 import api from '@mxjs/api';
-import {InputNumber} from 'antd';
 import Input from '@mxjs/a-input';
+import {FormItemSort} from '@miaoxing/admin';
 
 export default () => {
   const [parents, setParents] = useState([]);
@@ -34,9 +34,7 @@ export default () => {
         <FormItem label="简介" name="description">
           <Input.TextArea maxLength={255}/>
         </FormItem>
-        <FormItem label="顺序" name="sort" extra="大的显示在前面，按从大到小排列。">
-          <InputNumber precision={0}/>
-        </FormItem>
+        <FormItemSort/>
         <FormItem name="id" type="hidden"/>
         <FormAction/>
       </Form>
