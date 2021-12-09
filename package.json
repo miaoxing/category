@@ -34,6 +34,7 @@
     "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
-    "@mxjs/actions": "miaoxing/mxjs-actions"
+    "@mxjs/actions": "miaoxing/mxjs-actions",
+    "@mxjs/css": "miaoxing/mxjs-css"
   }
 }
