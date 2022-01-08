@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "twinh",
   "license": "MIT",
+  "workspaces": [
+    "plugins/*"
+  ],
   "jest": {
     "preset": "jest-preset-miaoxing"
   },
@@ -35,6 +38,7 @@
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
     "@mxjs/actions": "miaoxing/mxjs-actions",
-    "@mxjs/css": "miaoxing/mxjs-css"
+    "@mxjs/css": "miaoxing/mxjs-css",
+    "@mxjs/box": "miaoxing/mxjs-box"
   }
 }
