@@ -1,3 +1,36 @@
+# [0.4.0](https://github.com/miaoxing/category/compare/v0.3.0...v0.4.0) (2022-01-12)
+
+
+### Features
+
+* 更新 typescript 到 `^4.5.2` ([3035449](https://github.com/miaoxing/category/commit/30354493f5cd26c3ff547b1cb9ee99685c7e4264))
+* **category:** 使用 `@mxjs/a-input` 显示字数 ([b065520](https://github.com/miaoxing/category/commit/b065520df78ab848651e307e471cba37be33f695))
+* 优化顺序输入框 ([c62cfba](https://github.com/miaoxing/category/commit/c62cfbab7c054739231d491966b4e36c33a9e2f8))
+* 显示 `textarea` 的长度限制 ([c27d413](https://github.com/miaoxing/category/commit/c27d413b772608964193afa9145aa5c1ac6133b5))
+
+
+### BREAKING CHANGES
+
+* 更新 typescript 到 `^4.5.2`
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `0.1.0` to `0.1.1`
+* **@mxjs/a-page:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-clink:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/a-table:** upgrade from `0.4.0` to `0.4.1`
+* **@mxjs/a-form:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/api:** upgrade from `0.1.4` to `0.1.5`
+* **@mxjs/actions:** upgrade from `0.2.0` to `0.2.1`
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+* **@mxjs/test:** upgrade from `0.2.0` to `0.2.1`
+* **@miaoxing/app:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/link-to:** upgrade from `0.1.18` to `0.1.19`
+
 # [0.3.0](https://github.com/miaoxing/category/compare/v0.2.14...v0.3.0) (2021-10-28)
 
 
