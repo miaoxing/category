@@ -25,8 +25,8 @@ export default () => {
       </PageActions>
 
       <Form>
-        <FormItem label="父级分类" name="parentId" required>
-          <Select options={parents} labelKey="name" valueKey="id" firstLabel="根分类"/>
+        <FormItem label="父级分类" name="parentId">
+          <Select options={parents} labelKey="name" valueKey="id" firstLabel="根分类" firstValue=""/>
         </FormItem>
         <FormItem label="名称" name="name" required>
           <Input maxLength={255}/>
