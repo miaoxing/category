@@ -1,3 +1,30 @@
+# [0.5.0](https://github.com/miaoxing/category/compare/v0.4.2...v0.5.0) (2022-03-04)
+
+
+### Features
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint` ([96dd78e](https://github.com/miaoxing/category/commit/96dd78eb9eb7d07d2325c6d9433b508c497a8ba2))
+
+
+### BREAKING CHANGES
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint`
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/a-clink:** upgrade from `0.2.2` to `0.2.3`
+* **@mxjs/a-table:** upgrade from `0.4.2` to `0.4.3`
+* **@mxjs/a-form:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/api:** upgrade from `0.1.6` to `0.1.7`
+* **@mxjs/test:** upgrade from `0.2.2` to `0.2.3`
+* **@miaoxing/app:** upgrade from `0.6.0` to `0.6.1`
+* **@miaoxing/link-to:** upgrade from `0.1.21` to `0.1.22`
+
 ## [0.4.2](https://github.com/miaoxing/category/compare/v0.4.1...v0.4.2) (2022-02-28)
 
 
