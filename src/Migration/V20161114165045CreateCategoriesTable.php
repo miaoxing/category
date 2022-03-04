@@ -13,7 +13,7 @@ class V20161114165045CreateCategoriesTable extends BaseMigration
     {
         $this->schema->table('categories')->tableComment('商品分类')
             ->bigId()
-            ->int('app_id')
+            ->uBigInt('app_id')
             ->uBigInt('parent_id')
             ->smallInt('level', 1)->defaults(1)->comment('分类的层级')
             ->string('name')
