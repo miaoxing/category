@@ -10,8 +10,8 @@ return new class () extends BaseController {
 
     public function get()
     {
-        return IndexAction
-            ::beforeFind(function (CategoryModel $models) {
+        return IndexAction::new()
+            ->beforeFind(function (CategoryModel $models) {
                 $models->where('level', 1)
                     ->setDefaultSortColumn(['sort', 'id']);
             })
