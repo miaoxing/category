@@ -1,3 +1,25 @@
+## [0.5.1](https://github.com/miaoxing/category/compare/v0.5.0...v0.5.1) (2022-03-31)
+
+
+### Bug Fixes
+
+* **category:** `CategoryModel` 增加 `HasAppIdTrait` ([8727935](https://github.com/miaoxing/category/commit/8727935e4a6029d09fa8c533cbe4cfcbe8b9b467))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `0.3.3` to `0.3.4`
+* **@mxjs/a-clink:** upgrade from `0.2.3` to `0.2.4`
+* **@mxjs/a-table:** upgrade from `0.4.3` to `0.4.4`
+* **@mxjs/a-form:** upgrade from `0.3.3` to `0.3.4`
+* **@mxjs/api:** upgrade from `0.1.7` to `0.1.8`
+* **@mxjs/test:** upgrade from `0.2.3` to `0.2.4`
+* **@miaoxing/app:** upgrade from `0.6.1` to `0.6.2`
+* **@miaoxing/link-to:** upgrade from `0.1.22` to `0.1.23`
+
 # [0.5.0](https://github.com/miaoxing/category/compare/v0.4.2...v0.5.0) (2022-03-04)
 
 
