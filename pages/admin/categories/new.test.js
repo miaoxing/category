@@ -2,7 +2,7 @@ import Page from './new';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import {app} from '@mxjs/app';
-import $ from 'miaoxing';
+import $, {Ret} from 'miaoxing';
 import {waitFor} from '@testing-library/dom';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 
@@ -30,29 +30,25 @@ describe('admin/categories', () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: {
-          code: 1,
+        ret: Ret.suc({
           data: {
             parentId: 0,
             sort: 50,
           },
-        },
+        }),
       }))
       // 读取父级分类
       .mockImplementationOnce(() => promise2.resolve({
-        ret: {
-          code: 1,
+        ret: Ret.suc({
           data: [{
             id: 1,
             name: '测试分类',
           }],
-        },
+        }),
       }))
       // 提交
       .mockImplementationOnce(() => promise3.resolve({
-        ret: {
-          code: 1,
-        },
+        ret: Ret.suc(),
       }));
 
     const {getByLabelText} = render(<MemoryRouter>
