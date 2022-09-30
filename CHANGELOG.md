@@ -1,3 +1,17 @@
+## [0.5.9](https://github.com/miaoxing/category/compare/v0.5.8...v0.5.9) (2022-09-30)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `1.0.1` to `1.1.0`
+* **@mxjs/a-table:** upgrade from `1.0.2` to `1.1.0`
+* **@mxjs/a-form:** upgrade from `1.1.0` to `1.1.1`
+* **@miaoxing/app:** upgrade from `0.6.8` to `0.6.9`
+* **@miaoxing/link-to:** upgrade from `0.1.30` to `0.1.31`
+
 ## [0.5.8](https://github.com/miaoxing/category/compare/v0.5.7...v0.5.8) (2022-09-03)
 
 
