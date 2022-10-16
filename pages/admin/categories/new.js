@@ -9,7 +9,7 @@ import api from '@mxjs/api';
 import Input from '@mxjs/a-input';
 import {FormItemSort} from '@miaoxing/admin';
 
-export default () => {
+const New = () => {
   const [parents, setParents] = useState([]);
 
   useEffect(() => {
@@ -41,3 +41,5 @@ export default () => {
     </Page>
   );
 };
+
+export default New;
