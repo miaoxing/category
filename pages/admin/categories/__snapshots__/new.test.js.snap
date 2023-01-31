@@ -15,6 +15,7 @@ exports[`admin/categories form 1`] = `
     ],
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/categories/defaults",
       },
@@ -54,6 +55,7 @@ exports[`admin/categories form 2`] = `
     ],
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/categories/defaults",
       },
