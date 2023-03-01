@@ -1,3 +1,22 @@
+## [0.5.15](https://github.com/miaoxing/category/compare/v0.5.14...v0.5.15) (2023-03-01)
+
+
+### Bug Fixes
+
+* **category:** 增加 `miaoxing/admin` 依赖 ([70bb37f](https://github.com/miaoxing/category/commit/70bb37faa35afe12d243db8db536cac94659d13b))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `1.1.3` to `2.0.0`
+* **@mxjs/actions:** upgrade from `0.2.7` to `0.2.8`
+* **@miaoxing/app:** upgrade from `0.6.13` to `0.7.0`
+* **@miaoxing/admin:** upgrade from `0.9.7` to `0.10.0`
+* **@miaoxing/link-to:** upgrade from `0.1.35` to `0.1.36`
+
 ## [0.5.14](https://github.com/miaoxing/category/compare/v0.5.13...v0.5.14) (2023-01-31)
 
 
