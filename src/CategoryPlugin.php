@@ -3,6 +3,7 @@
 namespace Miaoxing\Category;
 
 use Miaoxing\Admin\Service\AdminMenu;
+use Miaoxing\App\Service\PermissionMap;
 
 class CategoryPlugin extends \Miaoxing\Plugin\BasePlugin
 {
@@ -16,16 +17,23 @@ class CategoryPlugin extends \Miaoxing\Plugin\BasePlugin
     {
         $product = $menu->child('product');
 
-        $categories = $product->addChild()->setLabel('分类管理')->setUrl('admin/categories')->setApis([
-            'GET admin-api/categories',
-        ]);
-        $categories->addChild()->setUrl('admin/categories/new')->setLabel('添加')->setApis([
-            'GET admin-api/categories/defaults',
-            'POST admin-api/categories',
-        ]);
-        $categories->addChild()->setUrl('admin/categories/[id]/edit')->setLabel('编辑')->setApis([
-            'GET admin-api/categories/[id]',
-            'PATCH admin-api/categories/[id]',
-        ]);
+        $categories = $product->addChild()->setLabel('分类管理')->setUrl('admin/categories');
+        $categories->addChild()->setLabel('添加')->setUrl('admin/categories/new');
+        $categories->addChild()->setLabel('编辑')->setUrl('admin/categories/[id]/edit');
+        $categories->addChild()->setLabel('删除')->setUrl('admin/categories/[id]/delete');
+    }
+
+    public function onPermissionGetMap(PermissionMap $map)
+    {
+        $map->prefix('admin/categories', function (PermissionMap $map) {
+            $map->addList();
+            $map->addNew('', [
+                'GET api/admin/categories',
+            ]);
+            $map->addEdit('', [
+                'GET api/admin/categories',
+            ]);
+            $map->addDelete();
+        });
     }
 }
