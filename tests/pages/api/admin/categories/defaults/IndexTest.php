@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Category\Pages\AdminApi\Categories\Defaults;
+namespace MiaoxingTest\Category\Pages\Api\Admin\Categories\Defaults;
 
 use Miaoxing\Category\Service\CategoryModel;
 use Miaoxing\Plugin\Service\Tester;

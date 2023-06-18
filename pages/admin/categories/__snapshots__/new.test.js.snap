@@ -10,14 +10,14 @@ exports[`admin/categories form 1`] = `
         "params": Object {
           "limit": 500,
         },
-        "url": "/admin-api/categories",
+        "url": "/api/admin/categories",
       },
     ],
     Array [
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/categories/defaults",
+        "url": "/api/admin/categories/defaults",
       },
     ],
   ],
@@ -50,14 +50,14 @@ exports[`admin/categories form 2`] = `
         "params": Object {
           "limit": 500,
         },
-        "url": "/admin-api/categories",
+        "url": "/api/admin/categories",
       },
     ],
     Array [
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/categories/defaults",
+        "url": "/api/admin/categories/defaults",
       },
     ],
     Array [
@@ -71,7 +71,7 @@ exports[`admin/categories form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/admin-api/categories",
+        "url": "/api/admin/categories",
       },
     ],
   ],

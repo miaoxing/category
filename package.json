@@ -40,6 +40,7 @@
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
     "@mxjs/actions": "miaoxing/mxjs-actions",
+    "@mxjs/app": "miaoxing/mxjs-app",
     "@mxjs/css": "miaoxing/mxjs-css",
     "@mxjs/box": "miaoxing/mxjs-box"
   }
