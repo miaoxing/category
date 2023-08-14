@@ -1,11 +1,11 @@
 <?php
 
 use Miaoxing\Category\Service\CategoryModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\PostToPatchTrait;
 use Miaoxing\Services\Service\IndexAction;
 
-return new class () extends BaseController {
+return new class () extends BasePage {
     use PostToPatchTrait;
 
     public function get()

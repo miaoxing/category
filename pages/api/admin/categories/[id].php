@@ -1,10 +1,10 @@
 <?php
 
 use Miaoxing\Category\Service\CategoryModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\ItemTrait;
 
-return new class () extends BaseController {
+return new class () extends BasePage {
     use ItemTrait;
 
     public function patch($req)
