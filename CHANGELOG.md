@@ -1,3 +1,17 @@
+## [0.5.23](https://github.com/miaoxing/category/compare/v0.5.22...v0.5.23) (2023-09-30)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-page:** upgrade from `2.1.5` to `2.2.0`
+* **@mxjs/a-form:** upgrade from `1.6.0` to `1.7.0`
+* **@miaoxing/app:** upgrade from `0.7.6` to `0.7.7`
+* **@miaoxing/admin:** upgrade from `0.11.0` to `0.11.1`
+* **@miaoxing/link-to:** upgrade from `0.1.42` to `0.1.43`
+
 ## [0.5.22](https://github.com/miaoxing/category/compare/v0.5.21...v0.5.22) (2023-09-02)
 
 
