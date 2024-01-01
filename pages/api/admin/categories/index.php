@@ -11,11 +11,11 @@ return new class () extends BasePage {
     public function get()
     {
         return IndexAction::new()
-            ->beforeFind(function (CategoryModel $models) {
+            ->beforeFind(static function (CategoryModel $models) {
                 $models->where('level', 1)
                     ->setDefaultSortColumn(['sort', 'id']);
             })
-            ->afterFind(function (CategoryModel $models) {
+            ->afterFind(static function (CategoryModel $models) {
                 $models->load('children');
             })
             ->exec($this);

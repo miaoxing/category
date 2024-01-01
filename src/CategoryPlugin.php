@@ -25,7 +25,7 @@ class CategoryPlugin extends \Miaoxing\Plugin\BasePlugin
 
     public function onPermissionGetMap(PermissionMap $map)
     {
-        $map->prefix('admin/categories', function (PermissionMap $map) {
+        $map->prefix('admin/categories', static function (PermissionMap $map) {
             $map->addList();
             $map->addNew('', [
                 'GET api/admin/categories',
