@@ -1,3 +1,26 @@
+## [0.5.28](https://github.com/miaoxing/category/compare/v0.5.27...v0.5.28) (2024-01-31)
+
+
+### Features
+
+* 更新 `react` 支持 18 ([3a88243](https://github.com/miaoxing/category/commit/3a882437d6363b41dccc7fc9d4d5be3ded3a2f4d))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `1.3.3` to `1.4.0`
+* **@mxjs/a-page:** upgrade from `2.2.3` to `2.3.0`
+* **@mxjs/a-clink:** upgrade from `2.0.5` to `2.1.0`
+* **@mxjs/a-table:** upgrade from `1.6.3` to `1.7.0`
+* **@mxjs/a-form:** upgrade from `2.0.3` to `2.1.0`
+* **@mxjs/actions:** upgrade from `0.2.16` to `0.2.17`
+* **@miaoxing/app:** upgrade from `0.7.11` to `0.8.0`
+* **@miaoxing/admin:** upgrade from `0.11.5` to `0.12.0`
+* **@miaoxing/link-to:** upgrade from `0.1.47` to `0.1.48`
+
 ## [0.5.27](https://github.com/miaoxing/category/compare/v0.5.26...v0.5.27) (2024-01-08)
 
 
