@@ -156,7 +156,7 @@ class CategoryModel extends BaseModel
      * @param Category $categories
      * @return Category|Category[]
      */
-    public function getAllChildren(Category $categories = null)
+    public function getAllChildren(?Category $categories = null)
     {
         // 第一次,初始化一个Collection对象
         if (!$categories) {
