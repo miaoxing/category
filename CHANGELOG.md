@@ -1,3 +1,23 @@
+## [0.5.31](https://github.com/miaoxing/category/compare/v0.5.30...v0.5.31) (2024-03-31)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `1.5.0` to `1.5.1`
+* **@mxjs/a-page:** upgrade from `2.4.1` to `2.5.0`
+* **@mxjs/a-clink:** upgrade from `2.1.1` to `2.1.2`
+* **@mxjs/a-table:** upgrade from `1.8.0` to `1.8.1`
+* **@mxjs/a-form:** upgrade from `2.2.0` to `2.2.1`
+* **@mxjs/api:** upgrade from `1.0.10` to `1.0.11`
+* **@miaoxing/dev:** upgrade from `9.1.0` to `9.1.1`
+* **@mxjs/test:** upgrade from `1.0.10` to `1.0.11`
+* **@miaoxing/app:** upgrade from `0.8.2` to `0.8.3`
+* **@miaoxing/admin:** upgrade from `0.12.2` to `0.12.3`
+* **@miaoxing/link-to:** upgrade from `0.1.50` to `0.1.51`
+
 ## [0.5.30](https://github.com/miaoxing/category/compare/v0.5.29...v0.5.30) (2024-02-29)
 
 

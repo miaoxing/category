@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/category",
-  "version": "0.5.30",
+  "version": "0.5.31",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -14,16 +14,16 @@
   "dependencies": {
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
-    "@mxjs/a-input": "^1.5.0",
-    "@mxjs/a-page": "^2.4.1",
-    "@mxjs/a-clink": "^2.1.1",
-    "@mxjs/a-table": "^1.8.0",
-    "@mxjs/a-form": "^2.2.0",
-    "@mxjs/api": "^1.0.10"
+    "@mxjs/a-input": "^1.5.1",
+    "@mxjs/a-page": "^2.5.0",
+    "@mxjs/a-clink": "^2.1.2",
+    "@mxjs/a-table": "^1.8.1",
+    "@mxjs/a-form": "^2.2.1",
+    "@mxjs/api": "^1.0.11"
   },
   "devDependencies": {
-    "@miaoxing/dev": "^9.1.0",
-    "@mxjs/test": "^1.0.10",
+    "@miaoxing/dev": "^9.1.1",
+    "@mxjs/test": "^1.0.11",
     "@testing-library/react": "^14",
     "typescript": "^4.5.2"
   },
