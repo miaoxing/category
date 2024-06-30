@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/category",
-  "version": "0.5.33",
+  "version": "0.5.34",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -17,8 +17,8 @@
     "@mxjs/a-input": "^1.5.1",
     "@mxjs/a-page": "^3.0.1",
     "@mxjs/a-clink": "^3.0.1",
-    "@mxjs/a-table": "^1.8.3",
-    "@mxjs/a-form": "^3.0.1",
+    "@mxjs/a-table": "^1.9.0",
+    "@mxjs/a-form": "^3.0.2",
     "@mxjs/api": "^1.1.0"
   },
   "devDependencies": {
