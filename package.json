@@ -19,6 +19,7 @@
     "@mxjs/a-clink": "^3.0.1",
     "@mxjs/a-table": "^1.9.0",
     "@mxjs/a-form": "^3.0.2",
+    "@mxjs/a-section": "^1.0.0",
     "@mxjs/api": "^1.1.0"
   },
   "devDependencies": {
@@ -37,6 +38,7 @@
     "@mxjs/a-input": "miaoxing/mxjs-a-input",
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
+    "@mxjs/a-section": "miaoxing/mxjs-a-section",
     "@mxjs/app": "miaoxing/mxjs-app",
     "@mxjs/css": "miaoxing/mxjs-css",
     "@mxjs/box": "miaoxing/mxjs-box"
