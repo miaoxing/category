@@ -3,7 +3,7 @@
  */
 import { CListBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
-import { Form, FormAction, FormItem } from '@mxjs/a-form';
+import { Form, FormActions, FormItem } from '@mxjs/a-form';
 import Input from '@mxjs/a-input';
 import { FormItemSort, Select } from '@miaoxing/admin';
 import { Section } from '@mxjs/a-section';
@@ -29,7 +29,7 @@ const New = () => {
           <FormItemSort/>
         </Section>
 
-        <FormAction/>
+        <FormActions/>
       </Form>
     </Page>
   );
