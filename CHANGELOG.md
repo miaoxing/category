@@ -1,3 +1,29 @@
+## [0.5.35](https://github.com/miaoxing/category/compare/v0.5.34...v0.5.35) (2024-07-31)
+
+
+### Features
+
+* **u:** 调整页面内容为卡片视图 ([fce981a](https://github.com/miaoxing/category/commit/fce981a8c23a22482d8260d7513b1b150de4b5b5))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `1.5.1` to `1.5.2`
+* **@mxjs/a-page:** upgrade from `3.0.1` to `4.0.0`
+* **@mxjs/a-clink:** upgrade from `3.0.1` to `3.0.2`
+* **@mxjs/a-table:** upgrade from `1.9.0` to `2.0.0`
+* **@mxjs/a-form:** upgrade from `3.0.2` to `4.0.0`
+* **@mxjs/a-section:** upgrade from `1.0.0` to `1.1.0`
+* **@mxjs/api:** upgrade from `1.1.0` to `1.1.1`
+* **@miaoxing/dev:** upgrade from `9.1.1` to `9.1.2`
+* **@mxjs/test:** upgrade from `2.0.0` to `2.0.1`
+* **@miaoxing/app:** upgrade from `0.10.1` to `0.10.2`
+* **@miaoxing/admin:** upgrade from `0.13.2` to `0.14.0`
+* **@miaoxing/link-to:** upgrade from `0.1.54` to `0.1.55`
+
 ## [0.5.34](https://github.com/miaoxing/category/compare/v0.5.33...v0.5.34) (2024-06-30)
 
 
