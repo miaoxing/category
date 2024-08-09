@@ -39,8 +39,6 @@
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
     "@mxjs/a-section": "miaoxing/mxjs-a-section",
-    "@mxjs/app": "miaoxing/mxjs-app",
-    "@mxjs/css": "miaoxing/mxjs-css",
-    "@mxjs/box": "miaoxing/mxjs-box"
+    "@mxjs/app": "miaoxing/mxjs-app"
   }
 }
