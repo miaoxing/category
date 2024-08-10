@@ -4,7 +4,7 @@ use Miaoxing\Category\Service\CategoryModel;
 use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\ItemTrait;
 
-return new class () extends BasePage {
+return new class extends BasePage {
     use ItemTrait;
 
     public function patch($req)
