@@ -1,3 +1,29 @@
+## [0.5.38](https://github.com/miaoxing/category/compare/v0.5.37...v0.5.38) (2024-09-01)
+
+
+### Features
+
+* 插件增加 wei 命令行入口 ([730439e](https://github.com/miaoxing/category/commit/730439e6e5abb3384953f16338ba0e401af9aa43))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `1.5.3` to `1.6.0`
+* **@mxjs/a-page:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-clink:** upgrade from `3.0.4` to `3.0.5`
+* **@mxjs/a-table:** upgrade from `2.0.2` to `2.1.0`
+* **@mxjs/a-form:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-section:** upgrade from `1.1.1` to `1.2.0`
+* **@mxjs/api:** upgrade from `1.1.3` to `1.1.4`
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@mxjs/test:** upgrade from `2.0.3` to `2.0.4`
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/admin:** upgrade from `0.15.1` to `0.15.2`
+* **@miaoxing/link-to:** upgrade from `0.1.56` to `0.1.57`
+
 ## [0.5.37](https://github.com/miaoxing/category/compare/v0.5.36...v0.5.37) (2024-08-03)
 
 
