@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/category",
-  "version": "0.5.38",
+  "version": "0.5.39",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -15,10 +15,10 @@
     "react": ">=16.13.1",
     "react-dom": ">=16.13.1",
     "@mxjs/a-input": "^1.6.0",
-    "@mxjs/a-page": "^4.1.0",
-    "@mxjs/a-clink": "^3.0.5",
-    "@mxjs/a-table": "^2.1.0",
-    "@mxjs/a-form": "^4.1.0",
+    "@mxjs/a-page": "^4.2.0",
+    "@mxjs/a-clink": "^3.0.6",
+    "@mxjs/a-table": "^2.2.0",
+    "@mxjs/a-form": "^4.1.1",
     "@mxjs/a-section": "^1.2.0",
     "@mxjs/api": "^1.1.4"
   },
