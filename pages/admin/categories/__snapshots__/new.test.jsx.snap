@@ -5,12 +5,7 @@ exports[`admin/categories form 1`] = `
   "calls": Array [
     Array [
       Object {
-        "loading": true,
-        "method": "get",
-        "params": Object {
-          "limit": 500,
-        },
-        "url": "/api/admin/categories",
+        "url": "categories?limit=500",
       },
     ],
     Array [
@@ -45,12 +40,7 @@ exports[`admin/categories form 2`] = `
   "calls": Array [
     Array [
       Object {
-        "loading": true,
-        "method": "get",
-        "params": Object {
-          "limit": 500,
-        },
-        "url": "/api/admin/categories",
+        "url": "categories?limit=500",
       },
     ],
     Array [
