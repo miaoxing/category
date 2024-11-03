@@ -5,6 +5,7 @@ exports[`admin/categories form 1`] = `
   "calls": Array [
     Array [
       Object {
+        "suspense": true,
         "url": "categories?limit=500",
       },
     ],
@@ -40,6 +41,7 @@ exports[`admin/categories form 2`] = `
   "calls": Array [
     Array [
       Object {
+        "suspense": true,
         "url": "categories?limit=500",
       },
     ],
