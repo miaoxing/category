@@ -1,3 +1,29 @@
+## [0.5.43](https://github.com/miaoxing/category/compare/v0.5.42...v0.5.43) (2024-12-30)
+
+
+### Bug Fixes
+
+* 限制 react 版本低于 19，避免测试失败 ([7db345c](https://github.com/miaoxing/category/commit/7db345ce96c747338f94e67e12314a06b05f1e6e))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-input:** upgrade from `1.6.0` to `1.6.1`
+* **@mxjs/a-page:** upgrade from `4.3.0` to `4.3.1`
+* **@mxjs/a-clink:** upgrade from `3.0.7` to `3.0.8`
+* **@mxjs/a-table:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/a-form:** upgrade from `5.1.0` to `5.2.0`
+* **@mxjs/a-section:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/api:** upgrade from `1.1.5` to `1.1.6`
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+* **@mxjs/test:** upgrade from `2.0.5` to `2.0.6`
+* **@miaoxing/app:** upgrade from `0.10.7` to `0.10.8`
+* **@miaoxing/admin:** upgrade from `0.16.3` to `0.17.0`
+* **@miaoxing/link-to:** upgrade from `0.1.60` to `0.1.61`
+
 ## [0.5.42](https://github.com/miaoxing/category/compare/v0.5.41...v0.5.42) (2024-11-30)
 
 

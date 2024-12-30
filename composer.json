@@ -8,9 +8,9 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.10.7",
-    "miaoxing/admin": "^0.16.3",
-    "miaoxing/link-to": "^0.1.60"
+    "miaoxing/app": "^0.10.8",
+    "miaoxing/admin": "^0.17.0",
+    "miaoxing/link-to": "^0.1.61"
   },
   "autoload": {
     "psr-4": {
@@ -37,11 +37,11 @@
       "wei/wei": "twinh/wei as 0.18.x-dev",
       "miaoxing/plugin": "miaoxing/plugin as 0.17.x-dev",
       "miaoxing/services": "miaoxing/services as 0.9.x-dev",
-      "miaoxing/admin": "miaoxing/admin as 0.16.x-dev"
+      "miaoxing/admin": "miaoxing/admin as 0.17.x-dev"
     }
   },
   "require-dev": {
-    "miaoxing/dev": "^9.2.0"
+    "miaoxing/dev": "^9.3.0"
   },
   "scripts": {
     "post-update-cmd": [
