@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Category\Service;
 
-use Miaoxing\Category\Metadata\CategoryTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
@@ -13,10 +12,28 @@ use Wei\Model\SoftDeleteTrait;
 /**
  * @property CategoryModel $parent
  * @property CategoryModel[]|CategoryModel $children
+ * @property string|null $id
+ * @property string $appId
+ * @property string $parentId
+ * @property int $level 分类的层级
+ * @property string $name
+ * @property string $image
+ * @property string $description
+ * @property int $sort
+ * @property string $listTpl
+ * @property string $linkTo 链接到的配置数组
+ * @property bool $isEnabled 是否启用
+ * @property int $pv
+ * @property int $uv
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
+ * @property string $createdBy
+ * @property string $updatedBy
+ * @property string|null $deletedAt
+ * @property string $deletedBy
  */
 class CategoryModel extends BaseModel
 {
-    use CategoryTrait;
     use HasAppIdTrait;
     use ModelTrait;
     use ReqQueryTrait;
